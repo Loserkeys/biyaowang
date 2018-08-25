@@ -256,6 +256,35 @@ $(() => {
     //轮播图调用
     new Slider('#banner')
 
+    //回到顶部
+    function returnTop(){
+        $(document).on('scroll',function(){
+            if($(document).scrollTop() > 0){
+                $('.rightBar-top').stop().fadeIn(100)
+            }else{
+                $('.rightBar-top').stop().fadeOut(100)
+            }
+        })
+        $('.rightBar-top').on('click',function(){
+            $('body,html').stop().animate({scrollTop : 0},1000)
+        })
+        if($(document).scrollTop() > 0){
+            $('.rightBar-top').stop().fadeIn(100)
+        }
+    }
+    returnTop();
+
+    //分享弹窗
+    function popUp(){
+        $(".rightBar-share").on('click',function(){
+            $('.shareMask').stop().fadeIn(300);
+        })
+        $(".close-popup").on('click',function(){
+            $('.shareMask').stop().fadeOut(300);
+        })
+    }
+    popUp()
+
     //模块1  category-modules-1 动态加载
     class Modules_1 {
         constructor() {
@@ -337,139 +366,139 @@ $(() => {
 
     // 模块3动态加载
 
-    // class Modules_3 {
-    //     constructor() {
-    //         this.loadJSON()
-    //             .done($.proxy(function (res) {
-    //                 this.renderPag(res.data.modules)
-    //             }, this))
-    //     }
-    //     loadJSON() {
-    //         return $.ajax({
-    //             url: '../php/indexpage1.json',
-    //             dataType: 'json'
-    //         })
-    //     }
-    //     renderPag(json) {
-    //         var html1 = '';
-    //         for (let i = 0, len = json.length; i < len; i++) {
-    //             if (json[i].moduleType == 3) {
-    //                 var html2 = '';
-    //                 html1 = `
-    //                         <div class="category-modules-3">
-    //                             <div class="category-modules-3-title">
-    //                                 <h3>${json[i].moduleInfo.moduleTitle}</h3>
-    //                                 <p>
-    //                                     <a href="javascript:void(0)">查看全部></a>
-    //                                 </p>
-    //                             </div>
-    //                             <ul id=${json[i].templateId}>
-    //                                 <li class="category-modules-3-list-first">
-    //                                     <a href="javascript:void(0)">
-    //                                         <i>
-    //                                             <img src="${json[i].moduleInfo.moduleImage}" alt="">
-    //                                         </i>
-    //                                         <span>${json[i].moduleInfo.manufacturers}&nbsp;&nbsp;${json[i].moduleInfo.moduleBrand}</span>
-    //                                     </a>
-    //                                 </li>
-    //                             </ul>
-    //                     </div>`
-    //                 $('#category').append(html1);
-    //                 for (let j = 0, lens = json[i].moduleInfo.moduleItems.length; j < lens; j++) {
-    //                     html2 = `
-    //                                 <li>
-    //                                     <a href="javascript:void(0)">
-    //                                         <i>
-    //                                             <img src="${json[i].moduleInfo.moduleItems[j].image}" alt="">
-    //                                         </i>
-    //                                         <dl>
-    //                                             <dt>${json[i].moduleInfo.moduleItems[j].ext.itemName}</dt>
-    //                                             <dd>¥${json[i].moduleInfo.moduleItems[j].ext.itemPrice}</dd>
-    //                                         </dl>
-    //                                     </a>
-    //                                 </li>`
-    //                     $(`#${json[i].templateId}`).append(html2);
-    //                 }
+    class Modules_3 {
+        constructor() {
+            this.loadJSON()
+                .done($.proxy(function (res) {
+                    this.renderPag(res.data.modules)
+                }, this))
+        }
+        loadJSON() {
+            return $.ajax({
+                url: '../php/indexpage1.json',
+                dataType: 'json'
+            })
+        }
+        renderPag(json) {
+            var html1 = '';
+            for (let i = 0, len = json.length; i < len; i++) {
+                if (json[i].moduleType == 3) {
+                    var html2 = '';
+                    html1 = `
+                            <div class="category-modules-3">
+                                <div class="category-modules-3-title">
+                                    <h3>${json[i].moduleInfo.moduleTitle}</h3>
+                                    <p>
+                                        <a href="javascript:void(0)">查看全部></a>
+                                    </p>
+                                </div>
+                                <ul id=${json[i].templateId}>
+                                    <li class="category-modules-3-list-first">
+                                        <a href="javascript:void(0)">
+                                            <i>
+                                                <img src="${json[i].moduleInfo.moduleImage}" alt="">
+                                            </i>
+                                            <span>${json[i].moduleInfo.manufacturers}&nbsp;&nbsp;${json[i].moduleInfo.moduleBrand}</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </div>`
+                    $('#category').append(html1);
+                    for (let j = 0, lens = json[i].moduleInfo.moduleItems.length; j < lens; j++) {
+                        html2 = `
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <i>
+                                                <img src="${json[i].moduleInfo.moduleItems[j].image}" alt="">
+                                            </i>
+                                            <dl>
+                                                <dt>${json[i].moduleInfo.moduleItems[j].ext.itemName}</dt>
+                                                <dd>¥${json[i].moduleInfo.moduleItems[j].ext.itemPrice}</dd>
+                                            </dl>
+                                        </a>
+                                    </li>`
+                        $(`#${json[i].templateId}`).append(html2);
+                    }
 
-    //             }
-    //         }
+                }
+            }
 
-    //     }
+        }
 
-    // }
-    // new Modules_3();
+    }
+    new Modules_3();
 
-    // //模块加载json2
-    // class Modulesjson2 {
-    //     constructor() {
-    //         this.scroll();
+    //模块加载json2  请求ajax2
+    class Modulesjson2 {
+        constructor() {
+            this.scroll();
 
-    //     }
-    //     loadJSON() {
-    //         return $.ajax({
-    //             url: `../php/indexpage2.json`,
-    //             dataType: 'json'
-    //         })
-    //     }
-    //     scroll() {
-    //         $(document).scroll(function () {
-    //             if ($(document).scrollTop() > 4000) {
-    //                 $(document).off('scroll');
-    //                 this.loadJSON()
-    //                     .done($.proxy(function (res) {
-    //                         this.renderPag(res.data.modules)
-    //                     }, this))
-    //             }
-    //         }.bind(this))
-    //     }
-    //     renderPag(json) {
-    //         var html1 = '';
-    //         for (let i = 0, len = json.length; i < len; i++) {
-    //             if (json[i].moduleType == 3) {
-    //                 var html2 = '';
-    //                 html1 = `
-    //                         <div class="category-modules-3">
-    //                             <div class="category-modules-3-title">
-    //                                 <h3>${json[i].moduleInfo.moduleTitle}</h3>
-    //                                 <p>
-    //                                     <a href="javascript:void(0)">查看全部></a>
-    //                                 </p>
-    //                             </div>
-    //                             <ul id=${json[i].templateId}>
-    //                                 <li class="category-modules-3-list-first">
-    //                                     <a href="javascript:void(0)">
-    //                                         <i>
-    //                                             <img src="${json[i].moduleInfo.moduleImage}" alt="">
-    //                                         </i>
-    //                                         <span>${json[i].moduleInfo.manufacturers}&nbsp;&nbsp;${json[i].moduleInfo.moduleBrand}</span>
-    //                                     </a>
-    //                                 </li>
-    //                             </ul>
-    //                     </div>`
-    //                 $('#category').append(html1);
-    //                 for (let j = 0, lens = json[i].moduleInfo.moduleItems.length; j < lens; j++) {
-    //                     html2 = `
-    //                                 <li>
-    //                                     <a href="javascript:void(0)">
-    //                                         <i>
-    //                                             <img src="${json[i].moduleInfo.moduleItems[j].image}" alt="">
-    //                                         </i>
-    //                                         <dl>
-    //                                             <dt>${json[i].moduleInfo.moduleItems[j].ext.itemName}</dt>
-    //                                             <dd>¥${json[i].moduleInfo.moduleItems[j].ext.itemPrice}</dd>
-    //                                         </dl>
-    //                                     </a>
-    //                                 </li>`
-    //                     $(`#${json[i].templateId}`).append(html2);
-    //                 }
+        }
+        loadJSON() {
+            return $.ajax({
+                url: `../php/indexpage2.json`,
+                dataType: 'json'
+            })
+        }
+        scroll() {
+            $(document).scroll(function () {
+                if ($(document).scrollTop() > 4000) {
+                    $(document).off('scroll');
+                    this.loadJSON()
+                        .done($.proxy(function (res) {
+                            this.renderPag(res.data.modules)
+                        }, this))
+                }
+            }.bind(this))
+        }
+        renderPag(json) {
+            var html1 = '';
+            for (let i = 0, len = json.length; i < len; i++) {
+                if (json[i].moduleType == 3) {
+                    var html2 = '';
+                    html1 = `
+                            <div class="category-modules-3">
+                                <div class="category-modules-3-title">
+                                    <h3>${json[i].moduleInfo.moduleTitle}</h3>
+                                    <p>
+                                        <a href="javascript:void(0)">查看全部></a>
+                                    </p>
+                                </div>
+                                <ul id=${json[i].templateId}>
+                                    <li class="category-modules-3-list-first">
+                                        <a href="javascript:void(0)">
+                                            <i>
+                                                <img src="${json[i].moduleInfo.moduleImage}" alt="">
+                                            </i>
+                                            <span>${json[i].moduleInfo.manufacturers}&nbsp;&nbsp;${json[i].moduleInfo.moduleBrand}</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                        </div>`
+                    $('#category').append(html1);
+                    for (let j = 0, lens = json[i].moduleInfo.moduleItems.length; j < lens; j++) {
+                        html2 = `
+                                    <li>
+                                        <a href="javascript:void(0)">
+                                            <i>
+                                                <img src="${json[i].moduleInfo.moduleItems[j].image}" alt="">
+                                            </i>
+                                            <dl>
+                                                <dt>${json[i].moduleInfo.moduleItems[j].ext.itemName}</dt>
+                                                <dd>¥${json[i].moduleInfo.moduleItems[j].ext.itemPrice}</dd>
+                                            </dl>
+                                        </a>
+                                    </li>`
+                        $(`#${json[i].templateId}`).append(html2);
+                    }
 
-    //             }
-    //         }
+                }
+            }
 
-    //     }
+        }
 
-    // }
-    // new Modulesjson2();
+    }
+    new Modulesjson2();
 
     // class Modulesjson3 {
     //     constructor() {

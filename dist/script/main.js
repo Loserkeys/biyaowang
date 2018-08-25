@@ -256,6 +256,35 @@ $(() => {
     //轮播图调用
     new Slider('#banner')
 
+    //回到顶部
+    function returnTop(){
+        $(document).on('scroll',function(){
+            if($(document).scrollTop() > 0){
+                $('.rightBar-top').stop().fadeIn(100)
+            }else{
+                $('.rightBar-top').stop().fadeOut(100)
+            }
+        })
+        $('.rightBar-top').on('click',function(){
+            $('body,html').stop().animate({scrollTop : 0},1000)
+        })
+        if($(document).scrollTop() > 0){
+            $('.rightBar-top').stop().fadeIn(100)
+        }
+    }
+    returnTop();
+
+    //分享弹窗
+    function popUp(){
+        $(".rightBar-share").on('click',function(){
+            $('.shareMask').stop().fadeIn(300);
+        })
+        $(".close-popup").on('click',function(){
+            $('.shareMask').stop().fadeOut(300);
+        })
+    }
+    popUp()
+
     //模块1  category-modules-1 动态加载
     class Modules_1 {
         constructor() {
@@ -287,35 +316,7 @@ $(() => {
     }
     new Modules_1()
 
-    //回到顶部
-    function returnTop(){
-        $(document).on('scroll',function(){
-            if($(document).scrollTop() > 0){
-                $('.rightBar-top').stop().fadeIn(100)
-            }else{
-                $('.rightBar-top').stop().fadeOut(100)
-            }
-        })
-        $('.rightBar-top').on('click',function(){
-            $('body,html').stop().animate({scrollTop : 0},1000)
-        })
-        if($(document).scrollTop() > 0){
-            $('.rightBar-top').stop().fadeIn(100)
-        }
-    }
-    returnTop();
 
-    //分享弹窗
-    function popUp(){
-        $(".rightBar-share").on('click',function(){
-            $('.shareMask').stop().fadeIn(300);
-        })
-        $(".close-popup").on('click',function(){
-            $('.shareMask').stop().fadeOut(300);
-        })
-    }
-    popUp()
-    
     //模块2  category-modules-2
     class Modules_2 {
         constructor(id) {
@@ -427,7 +428,7 @@ $(() => {
     }
     new Modules_3();
 
-    //模块加载json2
+    //模块加载json2  请求ajax2
     class Modulesjson2 {
         constructor() {
             this.scroll();
