@@ -398,7 +398,7 @@ a {
   bottom: 100px;
   left: 50%;
   z-index: 10;
-  margin-left: 560px; }
+  margin-left: 550px; }
   .rightBar li {
     height: 48px;
     cursor: pointer; }
@@ -411,10 +411,19 @@ a {
       width: 300px;
       height: 180px;
       position: absolute;
-      left: -315px;
-      top: -72px;
+      left: -310px;
+      top: -66px;
       z-index: 10;
-      background: #ffffff; }
+      background: #ffffff;
+      display: none; }
+      .rightBar .rightBar-code div span {
+        width: 15px;
+        height: 30px;
+        position: absolute;
+        left: 300px;
+        top: 75px;
+        z-index: 10;
+        background: url(http://static2.biyao.com/pc/common/img/master/right-triangle.png?v=biyao_ba531e2) no-repeat; }
       .rightBar .rightBar-code div dl {
         width: 150px;
         height: 150px;
@@ -440,8 +449,95 @@ a {
     background: url(http://static2.biyao.com/pc/common/img/master/rightBar-shareActive.png?v=biyao_07b0f4c) no-repeat; }
   .rightBar .rightBar-code:hover {
     background: url(http://static4.biyao.com/pc/common/img/master/rightBar-codeActive.png?v=biyao_a0d97e9) no-repeat; }
+  .rightBar .rightBar-code:hover > div {
+    display: block; }
   .rightBar .rightBar-top:hover {
     background: url(http://static1.biyao.com/pc/common/img/master/rightBar-topActive.png?v=biyao_9ed53de) no-repeat; }
+
+.shareMask {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 15;
+  display: none; }
+  .shareMask .share {
+    width: 450px;
+    height: 208px;
+    padding: 0 20px 25px 20px;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: #ffffff; }
+    .shareMask .share p {
+      width: 450px;
+      height: 40px;
+      border-bottom: 1px dotted #cccccc;
+      line-height: 40px; }
+      .shareMask .share p span {
+        display: block;
+        float: left;
+        font-size: 16px;
+        cursor: pointer; }
+      .shareMask .share p b {
+        display: block;
+        float: right;
+        width: 16px;
+        height: 16px;
+        margin-top: 12px;
+        cursor: pointer;
+        background: url(http://static3.biyao.com/pc/common/img/master/cls_btn.png?v=biyao_614d241) no-repeat; }
+    .shareMask .share .share-main {
+      width: 450px;
+      height: 152px;
+      padding-top: 15px; }
+      .shareMask .share .share-main dl {
+        float: left;
+        width: 120px;
+        height: 144px;
+        padding: 8px 25px 0 0;
+        border-right: 1px solid #cccccc; }
+        .shareMask .share .share-main dl dt {
+          width: 120px;
+          height: 120px;
+          background: url(http://www.biyao.com/RequestAPI/getQRCode?url=http%3A%2F%2Fm.biyao.com%2Fclassify%2FcategoryList%3FcategoryId%3D621%26title%3D%E5%92%96%E5%95%A1) no-repeat;
+          background-size: 100% 100%; }
+        .shareMask .share .share-main dl dd {
+          width: 120px;
+          height: 24px;
+          line-height: 24px;
+          font-size: 14px;
+          color: #666666;
+          text-align: center; }
+      .shareMask .share .share-main ul {
+        float: left;
+        width: 281px;
+        height: 84px;
+        padding-top: 40px; }
+        .shareMask .share .share-main ul li {
+          float: left;
+          width: 52px;
+          height: 84px;
+          margin-left: 15px; }
+          .shareMask .share .share-main ul li a {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-size: 100% 100%; }
+          .shareMask .share .share-main ul li span {
+            display: block;
+            font-size: 14px;
+            color: #666666;
+            margin-top: 15px; }
+        .shareMask .share .share-main ul li:nth-child(2) {
+          width: 56px; }
 
 .category-wrap {
   width: 100%;

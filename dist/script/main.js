@@ -304,6 +304,18 @@ $(() => {
         }
     }
     returnTop();
+
+    //分享弹窗
+    function popUp(){
+        $(".rightBar-share").on('click',function(){
+            $('.shareMask').stop().fadeIn(300);
+        })
+        $(".close-popup").on('click',function(){
+            $('.shareMask').stop().fadeOut(300);
+        })
+    }
+    popUp()
+    
     //模块2  category-modules-2
     class Modules_2 {
         constructor(id) {
