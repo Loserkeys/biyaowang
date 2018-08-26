@@ -1,0 +1,169 @@
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+pre, code, form, fieldset, legend,
+input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+fieldset, img {
+  border: 0; }
+
+address, caption, cite, code, dfn, em, strong, th, var, b, i {
+  font-style: normal;
+  font-weight: normal; }
+
+li {
+  list-style: none; }
+
+caption, th {
+  text-align: left; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+q:before, q:after {
+  content: ''; }
+
+abbr, acronym {
+  border: 0;
+  font-variant: normal; }
+
+sup {
+  vertical-align: text-top; }
+
+sub {
+  vertical-align: text-bottom; }
+
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit; }
+
+input, textarea, select {
+  *font-size: 100%; }
+
+legend {
+  color: #000; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background: #f9f9f9;
+  width: 100%; }
+
+.nav-wrap {
+  background: #ffffff;
+  border-bottom: 1px solid #eae4e8; }
+  .nav-wrap .nav-search .login {
+    width: 200px;
+    height: 105px;
+    float: right; }
+    .nav-wrap .nav-search .login .login-com {
+      width: 200px;
+      font-size: 12px;
+      color: #8c8292;
+      text-align: right;
+      line-height: 105px; }
+      .nav-wrap .nav-search .login .login-com span {
+        display: inline-block;
+        cursor: pointer; }
+      .nav-wrap .nav-search .login .login-com b {
+        display: inline-block;
+        width: 1px;
+        height: 12px;
+        margin: 0 6px;
+        background: #8c8292; }
+
+.account-main {
+  width: 400px;
+  margin: 0 auto;
+  background: #f9f9f9; }
+  .account-main .account-title {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #523669;
+    overflow: hidden; }
+    .account-main .account-title b {
+      display: block;
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+      float: left;
+      background: url(http://static.biyao.com/pc/common/img/master/sprit_biyao.png?v=biyao_653b0c0) no-repeat;
+      background-position: 0 -521px; }
+    .account-main .account-title p {
+      font-size: 20px;
+      width: 90px;
+      float: left; }
+    .account-main .account-title a {
+      margin-top: 5px;
+      margin-left: 15px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: normal;
+      color: #808080;
+      float: right; }
+  .account-main ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    display: block;
+    font-size: 12px;
+    clear: both; }
+    .account-main ul li {
+      position: relative;
+      margin-top: 20px; }
+      .account-main ul li input {
+        height: 17px;
+        width: 360px;
+        padding: 11px 20px;
+        border: 1px solid #e8e8e8;
+        line-height: 17px;
+        font: 14px "Microsoft YaHei";
+        color: #999;
+        background: #fff;
+        outline: 0;
+        vertical-align: middle; }
+      .account-main ul li .account-error {
+        position: absolute;
+        right: -315px;
+        top: 0;
+        display: block;
+        width: 300px;
+        height: 40px;
+        font-size: 12px;
+        line-height: 40px;
+        color: #F33; }
+    .account-main ul .login-auto span {
+      color: #8a8a8a;
+      cursor: pointer; }
+      .account-main ul .login-auto span b {
+        width: 15px;
+        height: 15px;
+        margin-right: 10px;
+        vertical-align: middle;
+        background: url(http://static1.biyao.com/pc/common/img/master/commonSprite.png?v=biyao_eed067d) no-repeat 0 -80px; }
+    .account-main ul .account-btn {
+      height: 50px;
+      margin-top: 10px !important;
+      line-height: 50px;
+      text-align: center;
+      font-size: 20px;
+      color: #fff;
+      cursor: pointer;
+      background: #F49F26; }
+  .account-main .biyao-caution {
+    margin-top: 20px;
+    color: #FF3333;
+    line-height: 15px;
+    font-size: 12px; }
+    .account-main .biyao-caution img {
+      margin-right: 6px;
+      vertical-align: middle;
+      line-height: 15px; }
