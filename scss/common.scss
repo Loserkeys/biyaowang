@@ -1,4 +1,12 @@
 @import "./_reset.scss"; // 全局样式
+.clearfix::after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
 
 //顶部栏
 .header-wrap {
@@ -142,6 +150,76 @@
     }
 }
 
+//吸顶菜单
+.retract-wrap {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #eae4e8;
+    background: #ffffff;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    .retract {
+        width: 1080px;
+        height: 60px;
+        margin: 0 auto;
+        overflow: hidden;
+        .retract-left {
+            width: 100px;
+            height: 60px;
+            line-height: 60px;
+            vertical-align: middle;
+            float: left;
+            span {
+                display: block;
+                font-size: 16px;
+                color: gray;
+                float: left;
+            }
+            i {
+                display: inline-block;
+                width: 15px;
+                height: 8px;
+                margin-left: 10px;
+                background: url(http://static2.biyao.com/pc/common/img/master/categoryDown.png?v=biyao_58c52bc) no-repeat;
+            }
+        }
+        .retract-right {
+            margin-top: 10px;
+            float: right;
+            width: 360px;
+            p {
+                position: relative;
+                z-index: 2;
+                background: #fff;
+                input {
+                    width: 298px;
+                    height: 38px;
+                    padding-left: 10px;
+                    line-height: 38px;
+                    color: #333;
+                    border: 1px solid #e8e8e8;
+                    font-size: 16px;
+                    border-radius: 3px 0 0 3px;
+                    vertical-align: middle;
+                }
+                span{
+                    display: inline-block;
+                    position: absolute;
+                    width: 39px;
+                    height: 38px;
+                    border:1px solid #e8e8e8;
+                    border-left: none;
+                    vertical-align: middle;
+                    border-radius: 0 3px 3px 0;
+                    background: url(http://static.biyao.com/pc/common/img/master/search.png?v=biyao_2e92562) center center no-repeat;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
 // 导航栏
 .nav-wrap {
     width: 100%;
@@ -191,6 +269,7 @@
                 top: 30px;
                 border-left: none;
                 border-radius: 0 5px 5px 0;
+                background : url(http://static.biyao.com/pc/common/img/master/search.png?v=biyao_2e92562) center center no-repeat
             }
             .nav-list {
                 width: 540px;
@@ -213,8 +292,9 @@
         }
     }
 }
+
 // 右侧悬浮菜单
-.rightBar{
+.rightBar {
     width: 48px;
     height: 144px;
     position: fixed;
@@ -222,81 +302,79 @@
     left: 50%;
     z-index: 10;
     margin-left: 550px;
-    li{
+    li {
         height: 48px;
         cursor: pointer;
     }
-    .rightBar-share{
+    .rightBar-share {
         background: url(http://static1.biyao.com/pc/common/img/master/rightBar-share.png?v=biyao_80da225) no-repeat;
     }
-    .rightBar-code{
+    .rightBar-code {
         // overflow: hidden;
         position: relative;
         background: url(http://static3.biyao.com/pc/common/img/master/rightBar-code.png?v=biyao_fe900d3) no-repeat;
-        div{
+        div {
             width: 300px;
             height: 180px;
             position: absolute;
             left: -310px;
-            top:-66px;
+            top: -66px;
             z-index: 10;
             background: #ffffff;
             display: none;
-            span{
+            span {
                 width: 15px;
                 height: 30px;
                 position: absolute;
                 left: 300px;
-                top:75px;
+                top: 75px;
                 z-index: 10;
                 background: url(http://static2.biyao.com/pc/common/img/master/right-triangle.png?v=biyao_ba531e2) no-repeat;
             }
-            dl{
+            dl {
                 width: 150px;
                 height: 150px;
                 float: left;
-                dt{
+                dt {
                     width: 150px;
                     height: 150px;
-                    img{
+                    img {
                         display: block;
                         width: 150px;
                         height: 150px;
                     }
                 }
-                dd{
+                dd {
                     width: 150px;
                     height: 30px;
                     line-height: 30px;
                     font-size: 14px;
                     text-align: center;
-                    color:gray;
+                    color: gray;
                 }
             }
         }
     }
-    .rightBar-top{
+    .rightBar-top {
         display: none;
         background: url(http://static.biyao.com/pc/common/img/master/rightBar-top.png?v=biyao_43b4dc3) no-repeat;
     }
-    .rightBar-share:hover{
+    .rightBar-share:hover {
         background: url(http://static2.biyao.com/pc/common/img/master/rightBar-shareActive.png?v=biyao_07b0f4c) no-repeat;
     }
-    .rightBar-code:hover{
+    .rightBar-code:hover {
         background: url(http://static4.biyao.com/pc/common/img/master/rightBar-codeActive.png?v=biyao_a0d97e9) no-repeat;
     }
-    .rightBar-code:hover>div{
+    .rightBar-code:hover>div {
         display: block;
     }
-
-    .rightBar-top:hover{
+    .rightBar-top:hover {
         background: url(http://static1.biyao.com/pc/common/img/master/rightBar-topActive.png?v=biyao_9ed53de) no-repeat;
     }
-
 }
 
 // 分享弹窗
-.shareMask{
+.shareMask {
     display: block;
     width: 100%;
     height: 100%;
@@ -306,10 +384,10 @@
     top: 0;
     z-index: 15;
     display: none;
-    .share{
+    .share {
         width: 450px;
         height: 208px;
-        padding: 0 20px 25px 20px ;
+        padding: 0 20px 25px 20px;
         position: fixed;
         z-index: 20;
         top: 0;
@@ -318,18 +396,18 @@
         left: 0;
         margin: auto;
         background: #ffffff;
-        p{
+        p {
             width: 450px;
             height: 40px;
             border-bottom: 1px dotted #cccccc;
             line-height: 40px;
-            span{
+            span {
                 display: block;
                 float: left;
                 font-size: 16px;
                 cursor: pointer;
             }
-            b{  
+            b {
                 display: block;
                 float: right;
                 width: 16px;
@@ -339,23 +417,23 @@
                 background: url(http://static3.biyao.com/pc/common/img/master/cls_btn.png?v=biyao_614d241) no-repeat;
             }
         }
-        .share-main{
+        .share-main {
             width: 450px;
             height: 152px;
             padding-top: 15px;
-            dl{
+            dl {
                 float: left;
                 width: 120px;
                 height: 144px;
-                padding: 8px 25px 0 0 ;
+                padding: 8px 25px 0 0;
                 border-right: 1px solid #cccccc;
-                dt{
+                dt {
                     width: 120px;
                     height: 120px;
                     background: url(http://www.biyao.com/RequestAPI/getQRCode?url=http%3A%2F%2Fm.biyao.com%2Fclassify%2FcategoryList%3FcategoryId%3D621%26title%3D%E5%92%96%E5%95%A1) no-repeat;
                     background-size: 100% 100%;
                 }
-                dd{
+                dd {
                     width: 120px;
                     height: 24px;
                     line-height: 24px;
@@ -364,66 +442,67 @@
                     text-align: center;
                 }
             }
-            ul{
+            ul {
                 float: left;
                 width: 281px;
                 height: 84px;
                 padding-top: 40px;
-                li{
+                li {
                     float: left;
                     width: 52px;
                     height: 84px;
                     margin-left: 15px;
-                    a{
+                    a {
                         display: block;
                         width: 50px;
                         height: 50px;
                         background-size: 100% 100%;
                     }
-                    span{
+                    span {
                         display: block;
                         font-size: 14px;
                         color: #666666;
                         margin-top: 15px;
                     }
                 }
-                li:nth-child(2){
+                li:nth-child(2) {
                     width: 56px;
                 }
             }
         }
     }
 }
+
 // 底部栏
-.footer-wrap{
+.footer-wrap {
     width: 100%;
     height: auto;
     clear: both;
     overflow: hidden;
-    .footer{
+    .footer {
         width: 1080px;
         overflow: hidden;
         margin: 0 auto;
-        .footer-server{
+        .footer-server {
             width: 1080px;
             height: 120px;
             border-bottom: 1px solid #333333;
             margin-bottom: 30px;
-            li{
+            li {
                 float: left;
                 width: 270px;
                 height: 120px;
                 line-height: 120px;
                 text-align: center;
-                dl{
+                dl {
                     line-height: 120px;
-                    dt{
+                    dt {
                         display: inline-block;
                         width: 80px;
                         height: 80px;
                         vertical-align: middle;
                     }
-                    dd{
+                    dd {
                         display: inline-block;
                         font-size: 16px;
                         color: #333333;
@@ -431,34 +510,33 @@
                     }
                 }
             }
-            
         }
-        .footer-main{
+        .footer-main {
             width: 1080px;
-            .footer-main-left{
+            .footer-main-left {
                 width: 777px;
                 padding-left: 50px;
                 border-right: 1px solid #cccccc;
                 float: left;
-                li{
+                li {
                     float: left;
                     width: 184px;
-                    p{
+                    p {
                         display: block;
                         font-size: 16px;
                         color: #333333;
                         margin-bottom: 30px;
                     }
-                    ul{
-                        li{
+                    ul {
+                        li {
                             float: none;
-                            a{
+                            a {
                                 font-size: 12px;
-                                color:gray;
+                                color: gray;
                             }
                         }
                     }
-                    h3{
+                    h3 {
                         width: 105px;
                         height: 105px;
                         background: url(http://static2.biyao.com/pc/common/img/master/app.png?v=biyao_41bce2f) center center no-repeat;
@@ -466,30 +544,30 @@
                     }
                 }
             }
-            .footer-main-right{
+            .footer-main-right {
                 float: right;
                 width: 252px;
                 text-align: center;
-                dt{
+                dt {
                     font-size: 16px;
                     color: #333333;
                 }
-                dd{
+                dd {
                     margin-top: 30px;
                     font-size: 12px;
                     color: gray;
                 }
             }
         }
-        .footer-info{
+        .footer-info {
             clear: both;
             padding-bottom: 10px;
             padding-top: 60px;
-            p{
+            p {
                 margin-bottom: 10px;
                 text-align: center;
-                span{
-                    display:inline-block;
+                span {
+                    display: inline-block;
                     margin: 0 10px;
                     font-size: 12px;
                     color: gray;

@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情页</title>
+    <link href="http://static.biyao.com/pc/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="../style/common.css">
+    <link rel="stylesheet" href="../style/gooddetails.css">
+</head>
+
+<body>
+    <!-- 顶部栏  -->
+    <div class="header header-wrap">
+        <div class="clearfix">
+            <ul class="header-left">
+                <li>
+                    <a href="javascript:void(0)">首页</a>
+                    <b></b>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">平台政策</a>
+                    <b></b>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">商家入驻</a>
+                </li>
+            </ul>
+            <ul class="header-right">
+                <li class="right-user">
+                    <a href="javascript:void(0)" class="login">登录</a>
+                    <a href="javascript:void(0)" class="regist">注册</a>
+                    <b></b>
+                </li>
+                <li class="right-downApp">
+                    <a href="javascript:void(0)">下载必要APP</a>
+                    <b></b>
+                    <div class="downApp">
+                        <img src="../img/1.png" alt="" class="img1">
+                        <p>买大牌制造产品</p>
+                        <p>上必要</p>
+                        <img src="../img/2.png" alt="" class="img2">
+                    </div>
+                </li>
+                <li class="right-msg">
+                    <a href="javascript:void(0)">消息中心</a>
+                    <span>0</span>
+                    <b></b>
+                </li>
+                <li class="right-server">
+                    <a href="javascript:void(0)">客户服务</a>
+                    <b></b>
+                    <div>
+                        <p>我的客服</p>
+                    </div>
+                </li>
+                <li class="right-shopCar">
+                    <a href="javascript:void(0)">购物车</a>
+                    <span class="num">0</span>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+    <!-- 吸顶菜单 -->
+    <!-- <div class="retract-wrap clearfix" id="retract-wrap" style="display : none">
+        <div class="retract">
+            <div class="retract-left">
+                <span>全部分类</span>
+                <i></i>
+            </div>
+            <div class="retract-right">
+                <p>
+                    <input type="text" placeholder="请输入要搜索的商品">
+                    <span id="searchBtn"></span>
+                </p>
+                <ul style="display:none">
+                    <li>数据线</li>
+                    <li>耳机</li>
+                    <li>包</li>
+                    <li>皮带</li>
+                    <li>洗发水</li>
+                    <li>电动牙刷</li>
+                    <li>面膜</li>
+                    <li>洗面奶</li>
+                    <li>眼霜</li>
+                    <li>行李箱</li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+    <!-- 导航栏 -->
+    <div class="nav-wrap ">
+        <div class="nav-search">
+            <h1 class="logo">
+                <a href="javascript:void(0)"></a>
+            </h1>
+            <div class="search-wrap">
+                <input class="search-box" type="text" placeholder="请输入要搜索的商品">
+                <div class="search"></div>
+                <!-- <ul class="nav-list">
+                    <li>
+                        <a href="javascript:void(0)">眼镜</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">电动牙刷</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">内衣</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">包</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">洗面奶</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">口红</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">耳机</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">行李箱</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">面膜</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">唇膏</a>
+                    </li>
+                </ul> -->
+            </div>
+        </div>
+    </div>
+    <!-- 右侧悬浮菜单 -->
+    <ul class="rightBar">
+        <li class="rightBar-share"></li>
+        <li class="rightBar-code">
+            <div>
+                <span></span>
+                <dl>
+                    <dt>
+                        <img src="http://static1.biyao.com/pc/common/img/master/wxCode.jpg?v=biyao_79ba7c9" alt="">
+                    </dt>
+                    <dd>扫码关注必要公众号</dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <img src="http://static1.biyao.com/pc/common/img/master/wxCode.jpg?v=biyao_79ba7c9" alt="">
+                    </dt>
+                    <dd>扫码下载必要APP</dd>
+                </dl>
+            </div>
+        </li>
+        <li class="rightBar-top"></li>
+
+    </ul>
+
+    <!-- 分享弹窗 -->
+    <div class="shareMask">
+        <div class="share">
+            <p>
+                <span>分享</span>
+                <b class="close-popup"></b>
+            </p>
+            <div class="share-main">
+                <dl>
+                    <dt></dt>
+                    <dd>扫一扫,分享好友!</dd>
+                </dl>
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)" style=" background : url(http://static4.biyao.com/pc/common/img/master/share_new.png?v=biyao_facf91e) -10px -190px no-repeat"></a>
+                        <span>QQ空间</span>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" style=" background : url(http://static4.biyao.com/pc/common/img/master/share_new.png?v=biyao_facf91e) -10px -130px no-repeat"></a>
+                        <span>新浪微博</span>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" style=" background : url(http://static4.biyao.com/pc/common/img/master/share_new.png?v=biyao_facf91e) -10px -70px no-repeat"></a>
+                        <span>Facebook</span>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" style=" background : url(http://static4.biyao.com/pc/common/img/master/share_new.png?v=biyao_facf91e) -10px -10px no-repeat"></a>
+                        <span>Twitter</span>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 子导航栏 -->
+    <div class="guide-wrap">
+        <div class="guide">
+            <a href="javascript:void(0)">首页
+                <b>&gt;</b>双面布丝光柔滑短T(2件)
+            </a>
+        </div>
+    </div>
+
+    <!-- 商品选择详情 -->
+    <div class="section clearfix">
+        <div class="editor-main">
+            <div class="editor-picture">
+                <p>
+                    <img src="http://bfs.biyao.com/group1/M00/00/6C/rBACVFkT4sGASgPEAAJVLA27Slw348.jpg" alt="">
+                </p>
+                <ul>
+                    <li class="">
+                        <img src="http://bfs.biyao.com/group1/M00/00/6C/rBACVFkT4sGASgPEAAJVLA27Slw348.jpg">
+                    </li>
+                    <li class="">
+                        <img src="http://bfs.biyao.com/group1/M00/3D/86/rBACYVsiRhKAdr1SAAFzxp4q3zM810.jpg">
+                    </li>
+                    <li class="">
+                        <img src="http://bfs.biyao.com/group1/M00/00/6B/wKhkVVkCsEWAWZOkAADh7j29WLM257.jpg">
+                    </li>
+                    <li class="main-active">
+                        <img src="http://bfs.biyao.com/group1/M00/3A/6E/rBACW1sGM9yATZN5AAGEkwIMMIQ472.jpg">
+                    </li>
+                    <li class="">
+                        <img src="http://bfs.biyao.com/group1/M00/3A/68/rBACYVsGM-iAJdRWAAFFkuVxKcw796.jpg">
+                    </li>
+                </ul>
+            </div>
+            <ul class="editor-policy clearfix">
+                <li>
+                    <span>7天无忧退货</span>
+                    <div>
+                        <i></i>根据国家七天无理由退货规范，为您办理退货退款，具体退货政策见商品详情页。</div>
+                </li>
+
+                <li>
+                    <span>先行赔付</span>
+                    <div>
+                        <i></i>争议可申诉，申诉成功，立即退款。</div>
+                </li>
+
+                <li>
+                    <span>超时赔偿</span>
+                    <div>
+                        <i></i>未按承诺时间发货，系统自动赔付（赔款金额为订单商品金额的30%，上限500元）。</div>
+                </li>
+
+                <li>
+                    <span>顺丰包邮</span>
+                    <div>
+                        <i></i>运费由商家承担</div>
+                </li>
+
+            </ul>
+        </div>
+        <div class="editor-panel sku">
+            <div class="panel-top">
+                <h1>80S双面布丝光柔滑短T（2件装）5005</h1>
+                <p>80S/1双面布纯棉面料，舒适柔软，质感细腻，吸汗透气</p>
+                <span class="manufacturer">Givenchy制造商直供</span>
+            </div>
+            <ul class="panel-main">
+                <li class="panel-press">
+                    <span>售价</span>
+                    <div>
+                        <span class="panel-maney">￥
+                            <i>199</i>
+                        </span>
+                        <span class="panel-duration">生产周期：
+                            <b>5</b>天
+                        </span>
+                    </div>
+                </li>
+
+                <li class="panel-specs">
+                    <ul class="specs-dimension-wrap">
+                        <li class="specs-dimension clearfix">
+                            <span class="panel-specs-item">颜色</span>
+                            <div>
+                                <ul>
+                                    <li class="specs-detail" parent="true" nomod="true">黑色/白色
+                                        <em></em>
+                                    </li>
+                                    <li class="specs-detail" parent="true" nomod="true">黑色/深灰
+                                        <em></em>
+                                    </li>
+                                    <li class="specs-detail" parent="true" nomod="true">黑色/藏青
+                                        <em></em>
+                                    </li>
+                                    <li class="specs-detail" parent="true" nomod="true">白色/深灰
+                                        <em></em>
+                                    </li>
+                                    <li class="specs-detail" parent="true" nomod="true">白色/藏青
+                                        <em></em>
+                                    </li>
+                                    <li class="specs-detail" parent="true" nomod="true">深灰/藏青
+                                        <em></em>
+                                    </li>
+                                    <li class="specs-detail" parent="true" nomod="true">2件/白色
+                                        <em></em>
+                                    </li>
+                                    <li class="specs-detail" parent="true" nomod="true">2件/黑色
+                                        <em></em>
+                                    </li>
+                                    <li class="specs-detail" parent="true" nomod="true">白色/浅蓝
+                                        <em></em>
+                                    </li>
+                                    <li class="specs-detail lowModel-specs-active" parent="true" nomod="true">黑色/浅蓝
+                                        <em></em>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="specs-dimension clearfix">
+                            <span>尺寸</span>
+                            <div>
+                                <ul>
+                                    <li class="specs-detail lowModel-specs-active" parent="false" nomod="true">S
+                                        <em></em>
+                                    </li>
+                                    <li class="specs-detail" parent="false" nomod="true">M
+                                        <em></em>
+                                    </li>
+                                    <li class="specs-detail" parent="false" nomod="true">L
+                                        <em></em>
+                                    </li>
+                                    <li class="specs-detail" parent="false" nomod="true">XL
+                                        <em></em>
+                                    </li>
+                                    <li class="specs-detail" parent="false" nomod="true">XXL
+                                        <em></em>
+                                    </li>
+                                    <li class="specs-detail" parent="false" nomod="true">XXXL
+                                        <em></em>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="panel-sizeImg">
+                    <div>
+                        <span>查看尺码对照表</span>
+                    </div>
+                    <!-- <img src="http://bfs.biyao.com/group1/M00/02/56/rBACW1kT5AaAAzVHAAB1OcxJY6Q418.jpg"> -->
+                </li>
+
+                <li class="panel-count">
+                    <span class="panel-count-item">数量</span>
+                    <div>
+                        <p class="panel-num">
+                            <span class="panel-minus">-</span>
+                            <span class="panel-number">1</span>
+                            <span class="panel-add">+</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <div class="panel-bottom">
+                <p id="buyNow" class="panel-buyNow">立即购买</p>
+                <p id="addShopCar">加入购物车</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 店铺信息 -->
+    <div class="section-view">
+        <div class="view-title clearfix">
+            <a href="javascript:void(0)">
+                <span></span>
+                <i>亓口</i>
+            </a>
+            <ul class="clearfix">
+                <li class="view-active" id="detail">商品信息
+                    <i></i>
+                </li>
+                <li id="evaluate">评价详情 5877
+                    <i></i>
+                </li>
+            </ul>
+            <p class="view-shopCar">加入购物车</p>
+        </div>
+        <div class="view-section clearfix">
+            <div class="view-supplier">
+                <div class="supplier-info clearfix">
+                    <div class="supplier-logo">
+                        <a href="javascript:void(0)">
+                            <img src="http://bfs.biyao.com/group1/M00/03/AE/rBACYVkUkI2APfwPAAC7nzwI-NA595.jpg">
+                        </a>
+                        <div>
+                            <b></b>
+                            <span>亓口</span>
+                            <p>亓口男装是一家集研发、设计、生产售后一体的高端男装企业。生产基地拥有多年代工Armani LACOSTE等国际知名品牌的经验，自有品牌“QI KOU"原创设计师品牌，追求东方美学，关注当代人文、服饰文化及生活方式，全力打造符合当前大众的衣衫。与国内知名纺织公司合作开发了众多新型混纺面料，加强服用性能。通过C2M模式，以独立的设计精神，让消费者享有国际一线品牌的生产流水线产品。</p>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>商品质量：
+                            <i>4.8</i>
+                        </li>
+                        <li>服务态度：
+                            <i>4.9</i>
+                        </li>
+                    </ul>
+                </div>
+                <a class="supplier-into" href="javascript:void(0)">进店看看</a>
+                <ul class="supplier-recommen">
+                    <li>
+                        <a target="_blank" href="http://www.biyao.com/products/1300835252010100001-0.html">
+                            <i>
+                                <img src="http://bfs.biyao.com/group1/M00/4F/BE/rBACW1t9HOeALjXiAAB_wXI-Z68665.jpg">
+                            </i>
+                            <dl>
+                                <dt>高密高弹缩脚口针织裤/3色</dt>
+                                <dd>￥299</dd>
+                            </dl>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a target="_blank" href="http://www.biyao.com/products/1300835010100100001-0.html">
+                            <i>
+                                <img src="http://bfs.biyao.com/group1/M00/23/C8/rBACW1oc4myAJV85AACPgeX4-WQ853.jpg">
+                            </i>
+                            <dl>
+                                <dt>SofTAL免烫短袖POLO衫</dt>
+                                <dd>￥189</dd>
+                            </dl>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a target="_blank" href="http://www.biyao.com/products/1300835181030100001-0.html">
+                            <i>
+                                <img src="http://bfs.biyao.com/group1/M00/2E/75/rBACVFqnZ9CAAiw4AAB2qFZzlKg230.jpg">
+                            </i>
+                            <dl>
+                                <dt>莫代尔V领T恤（两件装）</dt>
+                                <dd>￥209</dd>
+                            </dl>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a target="_blank" href="http://www.biyao.com/products/1300835249010100001-0.html">
+                            <i>
+                                <img src="http://bfs.biyao.com/group1/M00/4A/75/rBACVFtxJe-AXktkAACCGpt6FLQ778.jpg">
+                            </i>
+                            <dl>
+                                <dt>莫代尔V领长袖T恤2件装</dt>
+                                <dd>￥229</dd>
+                            </dl>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a target="_blank" href="http://www.biyao.com/products/1300835067020100001-0.html">
+                            <i>
+                                <img src="http://bfs.biyao.com/group1/M00/1F/C6/rBACVFoBSCGACoquAACZuPRVKFk722.jpg">
+                            </i>
+                            <dl>
+                                <dt>免烫高纱支小提花衬衫5色</dt>
+                                <dd>￥259</dd>
+                            </dl>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a target="_blank" href="http://www.biyao.com/products/1300835231010100001-0.html">
+                            <i>
+                                <img src="http://bfs.biyao.com/group1/M00/47/9F/rBACYVtamiyAQLjZAACerWBFvW0662.jpg">
+                            </i>
+                            <dl>
+                                <dt>缤纷针绣美国棉圆/V领T恤</dt>
+                                <dd>￥179</dd>
+                            </dl>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a target="_blank" href="http://www.biyao.com/products/1300835254010100001-0.html">
+                            <i>
+                                <img src="http://bfs.biyao.com/group1/M00/4F/C7/rBACW1t9M1GATImQAACO7h03NmA340.jpg">
+                            </i>
+                            <dl>
+                                <dt>撞色领口织带点缀POLO衫</dt>
+                                <dd>￥199</dd>
+                            </dl>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a target="_blank" href="http://www.biyao.com/products/1300835233010100001-0.html">
+                            <i>
+                                <img src="http://bfs.biyao.com/group1/M00/3C/B8/rBACW1saRdWAIQBLAACNYgXjv94265.jpg">
+                            </i>
+                            <dl>
+                                <dt>莫代尔圆领T恤（两件装）</dt>
+                                <dd>￥199</dd>
+                            </dl>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a target="_blank" href="http://www.biyao.com/products/1300835155010100001-0.html">
+                            <i>
+                                <img src="http://bfs.biyao.com/group1/M00/3A/91/rBACW1sGzjiARlzuAACYJ6d88wI188.jpg">
+                            </i>
+                            <dl>
+                                <dt>多彩舒适休闲衬衫（6色）</dt>
+                                <dd>￥159</dd>
+                            </dl>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="view-main clearfix">
+                <div id="vs_content" class="view-detail" class="display:block">
+                    <div class="wrap mg_t30 ie78 ">
+                        <div class="imgText-property">
+                            <dl>
+                                <dt>
+                                    商品名称
+                                </dt>
+                                <dd>
+                                    80S双面布丝光柔滑短T（2件装）5005
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    品牌名称
+                                </dt>
+                                <dd>
+                                    亓口
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    颜色说明
+                                </dt>
+                                <dd>
+                                    黑色/白色/藏青色/绿色/深灰/浅蓝
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    面料成分
+                                </dt>
+                                <dd>
+                                    100%纯棉优质面料（80S/1双面布）
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    产品类别
+                                </dt>
+                                <dd>
+                                    T恤类
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    产地
+                                </dt>
+                                <dd>
+                                    厦门
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    洗涤说明
+                                </dt>
+                                <dd>
+                                    建议手洗/低温熨烫/不可漂白/不可烘干/不可翻转干燥/平铺晾晒
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    ___
+                                </dt>
+                                <dd>
+                                    为防止衣服洗后变形，请勿带水悬挂晾干，应洗后整理平铺晾晒。
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    特别提示1
+                                </dt>
+                                <dd>
+                                    为了更好地提高穿着的舒适度和衣物的保型功能，面料经过特殊的烧毛、丝光等加工工序
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    特别提示2
+                                </dt>
+                                <dd>
+                                    尽管我们极力严格控制这些加工过程，但仍不可避免有少量的短纤维留在面料的间隙内。
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    特别提示3
+                                </dt>
+                                <dd>
+                                    首次清洗深色衣物浮絮会稍微明显，但并非掉色不影响穿着。经过多次的清洗过后即可明显改善，请放心穿着
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    温馨提示
+                                </dt>
+                                <dd>
+                                    由于灯光和显示器偏差等现象，可能导致实物与照片产生色差，请以最终收到实物商品颜色为准
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    发票须知
+                                </dt>
+                                <dd>
+                                    国家税务总局规定，自2017年7月1日起，开票抬头为公司者需提供“购买方纳税人识别号”否则无法做报销凭证。
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    ---------
+                                </dt>
+                                <dd>
+                                    本公司开具电子发票，请您在购买后选择开具电子发票并按要求填写（注：如没填写完整将无法开具发票）
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>
+                                    组合搭配
+                                </dt>
+                                <dd>
+                                    该商品是2件装组合，颜色可随意搭配（下单留言备注需搭配的颜色即可）生产周期以最终搭配组合为准
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="imgText-edit">
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/3A/6E/rBACW1sGNBWAGMdpAAMP4knKY1w000.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/38/B9/rBACVFsGNBWANavWAAMX62hE1q8143.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/3A/68/rBACYVsGNBWAVI_SAAMGBsUYxZI937.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/3A/6E/rBACW1sGNBaAS9oVAAMaUXdh1dU632.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/38/B9/rBACVFsGNBaAVY-zAACLvllPs4w123.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/3A/6E/rBACW1sGNBaAd2kiAAJRROpGHBs861.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/3A/68/rBACYVsGNBaAXVnjAALnSOu4iHM112.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/38/B9/rBACVFsGNBaANvi6AAMSmL0YrQE969.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/3A/68/rBACYVsGNBaAFBfhAACrRhc_TSg466.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/38/B9/rBACVFsGNBaAG6G-AAGxU5L1x4I621.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/3A/6E/rBACW1sGNBaAGoaUAAFbp0UprCU446.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/3A/6E/rBACW1sGNBaAA5BWAAFOaB_Gd4Q497.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/3A/68/rBACYVsGNBaAVekkAAGiNK4XuL0069.jpg">
+                                <img src="http://bfs.biyao.com/group1/M00/3C/E1/rBACVFsqDJeAR_DdAAL-_1pCIWw056.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/38/B9/rBACVFsGNBeAMrEUAAIcMJxU_jE644.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/38/B9/rBACVFsGNBeAV_VgAAF7MZGzaAM256.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/3A/6E/rBACW1sGNBeAEApjAAKQbkwE5jI747.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/3A/6E/rBACW1sGNBeARXZHAAGZKLQucVo988.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/3A/68/rBACYVsGNBeAb8ejAAIvC7SaSDI944.jpg">
+                            </p>
+                            <p>
+                                <img src="http://bfs.biyao.com/group1/M00/38/B9/rBACVFsGNBeAfTHEAAKTo7Poj-I342.jpg">
+                            </p>
+                            <p>
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-evaluate" style="display:none">
+                    <div class="eval-select clearfix">
+                        <ul>
+                            <li id="evalAll" class="eval-active">
+                                <span></span>全部</li>
+                            <li id="evalImage">
+                                <span></span>有图</li>
+                        </ul>
+                        <p>商品满意度：
+                            <i id="evalScore">4.8分</i>
+                        </p>
+                    </div>
+                    <ul class="eval-list">
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/0D/2E/rBACW1kYUmCAeQE4AAAS07sUNbw958.jpg">
+                                </dt>
+                                <dd>T***n</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">很好</p>
+                                <p class="eval-time">
+                                    <span>2018-08-24 11:11&nbsp;&nbsp;</span>
+                                    <span>颜色: 黑色/深灰</span>
+                                    <span>尺寸: S</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/44/EE/rBACW1tPUPaAC0cEAAI_DVT0WJg660_150x150.jpg">
+                                </dt>
+                                <dd>青***头</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">着急要货和客服联系当天发货，客服太给力了。</p>
+                                <p class="eval-time">
+                                    <span>2018-08-24 10:27&nbsp;&nbsp;</span>
+                                    <span>颜色: 黑色/深灰</span>
+                                    <span>尺寸: XXXL</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/2A/71/rBACVFpxYxOASesmAABGDyLOEDk665.png">
+                                </dt>
+                                <dd>我***择</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">不论是衣服质量还是商家服务都非常满意！谢谢！</p>
+                                <p class="eval-time">
+                                    <span>2018-08-24 11:08&nbsp;&nbsp;</span>
+                                    <span>颜色: 白色/浅蓝</span>
+                                    <span>尺寸: XL</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/29/65/rBACYVpYYEmAbIEEAAAHOAywrM0595.png">
+                                </dt>
+                                <dd>b***7</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">很好</p>
+                                <p class="eval-time">
+                                    <span>2018-08-23 22:13&nbsp;&nbsp;</span>
+                                    <span>颜色: 黑色/白色</span>
+                                    <span>尺寸: XXL</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/4E/CC/rBACW1t5Tb6AcaywAAARa2cKJCk272.png">
+                                </dt>
+                                <dd>执***清</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">衣服收到打开后，有点气味，做工精细</p>
+                                <p class="eval-time">
+                                    <span>2018-08-23 21:10&nbsp;&nbsp;</span>
+                                    <span>颜色: 深灰/藏青</span>
+                                    <span>尺寸: M</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/32/74/rBACYVq7u3KAWRYOAAAZhN3PG0U327.png">
+                                </dt>
+                                <dd>简***！</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">面料舒服，质量好！</p>
+                                <p class="eval-time">
+                                    <span>2018-08-23 19:03&nbsp;&nbsp;</span>
+                                    <span>颜色: 黑色/藏青</span>
+                                    <span>尺寸: XL</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/29/65/rBACYVpYYHGATNFiAAAHE23FPwo925.png">
+                                </dt>
+                                <dd>b***Y</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">质地柔软，上身很舒服，适合夏季穿着！</p>
+                                <p class="eval-time">
+                                    <span>2018-08-23 16:24&nbsp;&nbsp;</span>
+                                    <span>颜色: 白色/浅蓝</span>
+                                    <span>尺寸: L</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/4F/EC/rBACW1t-IE2AYXGOAAOUhS4HpVk333_150x150.jpg">
+                                </dt>
+                                <dd>小***飞</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">非常好，老公特别爱出汗，这件衣服吸汗不粘身上 而且干得快，是老公最喜欢的，明年再给他买两件带花纹的</p>
+                                <p class="eval-time">
+                                    <span>2018-08-23 10:46&nbsp;&nbsp;</span>
+                                    <span>颜色: 黑色/藏青</span>
+                                    <span>尺寸: XXL</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/2A/71/rBACVFpxYxOASesmAABGDyLOEDk665.png">
+                                </dt>
+                                <dd>b***Q</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">衣服做工精细，质量上乘。</p>
+                                <p class="eval-time">
+                                    <span>2018-08-22 21:53&nbsp;&nbsp;</span>
+                                    <span>颜色: 深灰/藏青</span>
+                                    <span>尺寸: XL</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/2A/71/rBACVFpxYvGAIFhJAABuofmOhKY324.png">
+                                </dt>
+                                <dd>b***q</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">刚收到，感觉还不错</p>
+                                <p class="eval-time">
+                                    <span>2018-08-22 21:17&nbsp;&nbsp;</span>
+                                    <span>颜色: 黑色/浅蓝</span>
+                                    <span>尺寸: XL</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/29/65/rBACYVpYYHGATNFiAAAHE23FPwo925.png">
+                                </dt>
+                                <dd>b***P</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">很好</p>
+                                <p class="eval-time">
+                                    <span>2018-08-22 11:32&nbsp;&nbsp;</span>
+                                    <span>颜色: 黑色/白色</span>
+                                    <span>尺寸: XXL</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/2C/24/rBACW1pxYuqAVolLAABReYmri1o066.png">
+                                </dt>
+                                <dd>b***t</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">刚到手，看了一下，做工很精细，喜欢</p>
+                                <p class="eval-time">
+                                    <span>2018-08-22 10:02&nbsp;&nbsp;</span>
+                                    <span>颜色: 黑色/白色</span>
+                                    <span>尺寸: M</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/0D/30/rBACW1kYUoWAZdYLAABZ3PiIGfQ271.png">
+                                </dt>
+                                <dd>b***4</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">质量挺好</p>
+                                <p class="eval-time">
+                                    <span>2018-08-22 07:26&nbsp;&nbsp;</span>
+                                    <span>颜色: 白色/深灰</span>
+                                    <span>尺寸: M</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/4B/37/rBACVFtzfpuALd6DAAY3PBzguCQ798_150x150.jpg">
+                                </dt>
+                                <dd>刘***1</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">很好</p>
+                                <p class="eval-time">
+                                    <span>2018-08-22 01:25&nbsp;&nbsp;</span>
+                                    <span>颜色: 深灰/藏青</span>
+                                    <span>尺寸: XL</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/2C/21/rBACYVpxYwyASHYkAABhkj7uR1c631.png">
+                                </dt>
+                                <dd>b***l</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">尺寸合适，质量不错！</p>
+                                <p class="eval-time">
+                                    <span>2018-08-21 21:59&nbsp;&nbsp;</span>
+                                    <span>颜色: 2件/白色</span>
+                                    <span>尺寸: M</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/4E/B2/rBACYVt4-BKAOszdAATl-M0cHK8850_150x150.jpg">
+                                </dt>
+                                <dd>代***姐</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">衣服质量很好，老公很喜欢</p>
+                                <p class="eval-time">
+                                    <span>2018-08-21 20:11&nbsp;&nbsp;</span>
+                                    <span>颜色: 黑色/藏青</span>
+                                    <span>尺寸: XXL</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/04/64/rBACVFkX38OAUIRoAAAdcEzu1zw849.jpg">
+                                </dt>
+                                <dd>R***0</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">一如既往地好</p>
+                                <p class="eval-time">
+                                    <span>2018-08-21 19:30&nbsp;&nbsp;</span>
+                                    <span>颜色: 白色/深灰</span>
+                                    <span>尺寸: XL</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/0A/3B/rBACYVkYH_KACPkiAAActZ0JrzY190.png">
+                                </dt>
+                                <dd>y***g</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">衣服佷好，第二次购买了</p>
+                                <p class="eval-time">
+                                    <span>2018-08-21 19:34&nbsp;&nbsp;</span>
+                                    <span>颜色: 2件/黑色</span>
+                                    <span>尺寸: XXXL</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://static3.biyao.com/pc/common/img/master/admin.png">
+                                </dt>
+                                <dd>门***派</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">手感不错，作工好</p>
+                                <p class="eval-time">
+                                    <span>2018-08-21 15:51&nbsp;&nbsp;</span>
+                                    <span>颜色: 深灰/藏青</span>
+                                    <span>尺寸: XL</span>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <dl class="eval-user">
+                                <dt>
+                                    <img src="http://bfs.biyao.com/group1/M00/29/65/rBACYVpYYGeAd-MCAAAKFIHTVBs742.png">
+                                </dt>
+                                <dd>b***G</dd>
+                            </dl>
+                            <dl class="eval-score">
+                                <dt class="eval-good"></dt>
+                                <dd>好评</dd>
+                            </dl>
+                            <div class="eval-content">
+                                <p class="eval-artical">不错，感觉很好</p>
+                                <p class="eval-time">
+                                    <span>2018-08-21 15:45&nbsp;&nbsp;</span>
+                                    <span>颜色: 黑色/深灰</span>
+                                    <span>尺寸: XXL</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部栏 -->
+    <div class="footer-wrap">
+        <div class="footer">
+            <ul class="footer-server">
+                <li>
+                    <dl>
+                        <dt style="background: url(http://static.biyao.com/pc/common/img/master/serve-make.png?v=biyao_af9ffe1) no-repeat"></dt>
+                        <dd>直联一线制造</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt style="background: url(http://static2.biyao.com/pc/common/img/master/serve-backage.png?v=biyao_e2de7c6) no-repeat"></dt>
+                        <dd>全品类包邮</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt style="background: url(http://static4.biyao.com/pc/common/img/master/serve-pay.png?v=biyao_77dd9d9) no-repeat"></dt>
+                        <dd>平台先行赔付</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt style="background: url(http://static1.biyao.com/pc/common/img/master/serve-refund.png?v=biyao_2c6f2c2) no-repeat"></dt>
+                        <dd>7天无忧退换货</dd>
+                    </dl>
+                </li>
+            </ul>
+            <div class="footer-main">
+                <ul class="footer-main-left">
+                    <li>
+                        <p>帮助中心</p>
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)">平台政策</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">商家入驻</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>关注必要</p>
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)">官方微信</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">新浪微博</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>关于必要</p>
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)">了解必要</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">加入必要</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">联系我们</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <p>下载必要APP</p>
+                        <h3></h3>
+                    </li>
+
+                </ul>
+                <dl class="footer-main-right">
+                    <dt>服务监督邮箱</dt>
+                    <dd>cs@biyao.com</dd>
+                </dl>
+            </div>
+            <div class="footer-info">
+                <p>
+                    <span id="year"></span>
+                    <script>
+                        document.getElementById('year').innerHTML =
+                            `Copyright © ${new Date().getFullYear()}, BIYAO.COM`
+                    </script>
+                    <span>珠海必要科技有限公司</span>
+                    <span>粤网文〔2018〕0969-419号</span>
+                    <span></span>
+                    <span>粤ICP备13088531号-2</span>
+                </p>
+                <p>
+                    <span>互联网药品信息服务资格证书</span>
+                    <span>食品经营许可证</span>
+                </p>
+                <p>
+                    <span>公司地址：珠海市唐家湾镇哈工大路1号1栋E301-15</span>
+                    <span>公司电话：0756-3635580</span>
+                </p>
+                <p>
+                    <span>必要商城提示您，产品“由某制造商出品”仅为陈述制造商既往生产经历，并不意味着相应产品与特定品牌产品相同或近似。</span>
+                </p>
+
+            </div>
+
+
+        </div>
+    </div>
+    <script src="../script/jquery-1.11.3.js"></script>
+    <script src="../script/common.js"></script>
+
+</body>
+
+</html>

@@ -45,8 +45,6 @@ $(function () {
             })
         }
         renderPag(json) {
-            console.log(json);
-
             var html1 = '';
             for (let i = 0, len = json.length; i < len; i++) {
                 var html2 = '';
@@ -81,4 +79,16 @@ $(function () {
     }
     new GoodsList();
 
+    // 吸顶菜单
+    
+    function retract() {
+        $(document).on('scroll', function () {
+            if ($(document).scrollTop() > 150) {
+                $('#retract-wrap').stop().slideDown(200);
+            } else {
+                $('#retract-wrap').stop().slideUp(200);
+            }
+        })
+    }
+    retract()
 })

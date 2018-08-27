@@ -1,0 +1,709 @@
+@import "./_reset.scss"; // 全局样式
+body {
+    background: #ffffff;
+    width: 100%;
+}
+
+.clearfix::after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+// 导航栏
+.nav-wrap {
+    width: 100%;
+    height: 105px;
+    overflow: hidden;
+    border-bottom: 1px solid #f6f6f6;
+    .nav-search {
+        width: 1080px;
+        height: 105px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+        .logo {
+            width: 239px;
+            height: 98px;
+            float: left;
+            a {
+                display: block;
+                width: 239px;
+                height: 98px;
+                padding: 0;
+                background: url(http://static1.biyao.com/pc/common/img/master/logo.png?v=biyao_e06b35d) center no-repeat;
+            }
+        }
+        .search-wrap {
+            width: 360px;
+            height: 105px;
+            float: right;
+            position: relative;
+            .search-box {
+                width: 308px;
+                height: 38px;
+                border: 1px solid #cccccc;
+                float: right;
+                border-radius: 5px 0 0 5px;
+                position: absolute;
+                left: 0;
+                top: 30px;
+                padding-left: 10px;
+            }
+            .search {
+                display: inline-block;
+                width: 39px;
+                height: 38px;
+                border: 1px solid #cccccc;
+                position: absolute;
+                right: 0;
+                top: 30px;
+                border-left: none;
+                border-radius: 0 5px 5px 0;
+                background: url(http://static.biyao.com/pc/common/img/master/search.png?v=biyao_2e92562) center center no-repeat
+            }
+            .nav-list {
+                width: 360px;
+                height: 35px;
+                position: absolute;
+                line-height: 35px;
+                position: absolute;
+                left: 0;
+                top: 70px;
+                li {
+                    float: left;
+                    a {
+                        display: block;
+                        font-size: 12px;
+                        color: #808080;
+                        padding-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 子导航栏
+.guide-wrap {
+    width: 100%;
+    overflow: hidden;
+    background: #f9f9f9;
+    .guide {
+        width: 1080px;
+        font-size: 12px;
+        color: gray;
+        margin: 20px auto;
+        a {
+            color: gray;
+        }
+    }
+}
+
+//商品选择详情
+.section {
+    width: 1080px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    .editor-main {
+        width: 562px;
+        height: 498px;
+        float: left;
+        .editor-picture {
+            width: 562px;
+            height: 462px;
+            p {
+                position: relative;
+                float: left;
+                width: 460px;
+                height: 460px;
+                margin-right: 18px;
+                border: 1px solid #ccc;
+                text-align: center;
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            ul {
+                float: left;
+                width: 80px;
+                height: 460px;
+                overflow: hidden;
+                li {
+                    height: 80px;
+                    width: 80px;
+                    margin-bottom: 13px;
+                    border: 1px solid #ccc;
+                    cursor: pointer;
+                    text-align: center;
+                    img {
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+            }
+        }
+        .editor-policy {
+            margin-top: 15px;
+            font-size: 12px;
+            li {
+                position: relative;
+                float: left;
+                margin-right: 10px;
+                cursor: pointer;
+                span {
+                    padding-left: 20px;
+                    color: #333;
+                    background: url(http://static4.biyao.com/pc/common/img/master/policy-icon.png?v=biyao_238b758) left center no-repeat;
+                }
+                div {
+                    position: absolute;
+                    top: 25px;
+                    left: -55px;
+                    z-index: 2;
+                    display: none;
+                    width: 230px;
+                    padding: 10px 15px;
+                    border-radius: 3px;
+                    box-shadow: 0 1px 10px 4px rgba(0, 0, 0, .05);
+                    background: #fff;
+                    line-height: 27px;
+                    color: #666;
+                    i {
+                        position: absolute;
+                        top: -15px;
+                        left: 80px;
+                        z-index: 1;
+                        width: 30px;
+                        height: 15px;
+                        background: url(http://static.biyao.com/pc/common/img/master/triangle.png?v=biyao_5912cd0) no-repeat;
+                    }
+                }
+            }
+        }
+    }
+    .editor-panel {
+        float: right;
+        width: 465px;
+        .panel-top {
+            border-bottom: 1px solid #ccc;
+            h1 {
+                font-size: 20px;
+                font-weight: 400;
+                color: #333;
+                margin-bottom: 14px;
+            }
+            p {
+                font-size: 14px;
+                color: #999;
+                margin-bottom: 14px;
+            }
+            .manufacturer {
+                display: inline-block;
+                height: 24px;
+                padding: 0 10px;
+                margin-bottom: 10px;
+                border-radius: 2px;
+                background-color: #F7F1E8;
+                font-size: 12px;
+                line-height: 24px;
+                color: #BF9E6B;
+            }
+        }
+        .panel-main {
+            color: #666;
+            padding: 0;
+            border: 0;
+            list-style: none;
+            display: block;
+            font-size: 12px;
+            .panel-press {
+                overflow: hidden;
+                margin-top: 15px;
+                span {
+                    display: block;
+                    float: left;
+                    width: 65px;
+                    font-size: 14px;
+                    height: 35px;
+                    line-height: 42px;
+                }
+                div {
+                    float: right;
+                    width: 400px;
+                    height: 35px;
+                    .panel-maney {
+                        display: block;
+                        float: left;
+                        height: 35px;
+                        font-size: 14px;
+                        color: #f85453;
+                        i {
+                            display: block;
+                            float: right;
+                            height: 35px;
+                            font-size: 28px;
+                        }
+                    }
+                    .panel-duration {
+                        display: block;
+                        width: 100px;
+                        font-size: 14px;
+                        height: 35px;
+                        line-height: 42px;
+                        margin-left: 40px;
+                        b {
+                            display: inline-block;
+                            font-size: 14px;
+                            height: 35px;
+                            line-height: 42px;
+                        }
+                    }
+                }
+            }
+            .panel-specs {
+                .specs-dimension-wrap {
+                    width: 465px;
+                    height: 300px;
+                    .specs-dimension {
+                        margin-top: 15px;
+                        overflow: visible;
+                        .panel-specs-item {
+                            display: block;
+                            float: left;
+                            width: 65px;
+                            height: 35px;
+                            line-height: 35px;
+                            font-size: 14px;
+                        }
+                        div {
+                            float: right;
+                            width: 400px;
+                            ul {
+                                width: 406px;
+                                li {
+                                    position: relative;
+                                    display: inline-block;
+                                    margin: 0 6px 15px 0;
+                                    border: 1px solid #ccc;
+                                    height: 33px;
+                                    line-height: 33px;
+                                    padding: 0 23px;
+                                    font-size: 14px;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .panel-sizeImg {
+                width: 465px;
+                height: 16px;
+                margin: 0 0 15px;
+                overflow: hidden;
+                div {
+                    float: right;
+                    width: 400px;
+                    span {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .panel-count {
+                overflow: hidden;
+                .panel-count-item {
+                    float: left;
+                    width: 65px;
+                    font-size: 14px;
+                    height: 30px;
+                    line-height: 30px;
+                }
+                div {
+                    float: right;
+                    width: 400px;
+                    .panel-num {
+                        float: left;
+                        border: 1px solid #b3b3b3;
+                        padding: 1px 0;
+                        overflow: hidden;
+                        span {
+                            float: left;
+                            width: 28px;
+                            height: 26px;
+                            text-align: center;
+                            line-height: 26px;
+                            font-size: 14px;
+                            color: #000;
+                        }
+                        .panel-minus {
+                            border-right: 1px solid #e4e3e5;
+                        }
+                        .panel-add {
+                            border-left: 1px solid #e4e3e5;
+                        }
+                    }
+                }
+            }
+        }
+        .panel-bottom {
+            margin-top: 15px;
+            overflow: hidden;
+            margin-left: 65px;
+            p {
+                display: inline-block;
+                width: 180px;
+                height: 40px;
+                line-height: 40px;
+                color: #fff;
+                font-size: 18px;
+                text-align: center;
+                background: #f7b200;
+                cursor: pointer;
+            }
+            .panel-buyNow {
+                margin-right: 15px;
+                background: #523669;
+            }
+        }
+    }
+}
+
+// 店铺信息
+.section-view {
+    width: 1080px;
+    margin: 40px auto;
+    padding-top: 60px;
+    position: relative;
+    overflow: hidden;
+    .view-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: 60px;
+        width: 1078px;
+        background: #EEECEF;
+        border: 1px solid #ccc;
+        a {
+            float: left;
+            width: 240px;
+            border-right: 1px solid #ccc;
+            text-align: center;
+            color: #333;
+            font-size: 16px;
+            font-weight: 400;
+            span {
+                display: inline-block;
+                width: 20px;
+                height: 60px;
+                margin: 0 12px;
+                background: url(http://static4.biyao.com/pc/common/img/master/supplier-icon.png?v=biyao_c57f462) center no-repeat;
+                vertical-align: middle;
+            }
+            i {
+                display: inline-block;
+                max-width: 170px;
+                vertical-align: middle;
+            }
+        }
+        ul {
+            float: left;
+            border-left: 0;
+            line-height: 60px;
+            text-align: center;
+            li {
+                position: relative;
+                float: left;
+                width: 180px;
+                border-right: 1px solid #ccc;
+                color: #333;
+                font-size: 16px;
+                cursor: pointer;
+                i {
+                    position: absolute;
+                    display: none;
+                    height: 3px;
+                    background: #523669;
+                    left: 0;
+                    bottom: -1px;
+                    width: 100%;
+                }
+            }
+            .view-active {
+                background: #fff;
+                color: #523669;
+            }
+        }
+        p {
+            float: right;
+            display: none;
+            width: 180px;
+            height: 40px;
+            margin: 10px 20px;
+            line-height: 40px;
+            color: #fff;
+            font-size: 18px;
+            text-align: center;
+            background: #f7b200;
+            cursor: pointer;
+        }
+    }
+    .view-section {
+        .view-supplier {
+            float: left;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-top: 0;
+            padding: 20px;
+            .supplier-info {
+                .supplier-logo {
+                    position: relative;
+                    float: left;
+                    margin-right: 10px;
+                    border: 1px solid #ccc;
+                    a {
+                        text-decoration: none;
+                        cursor: pointer;
+                        outline: 0;
+                        img {
+                            width: 76px;
+                            height: 76px;
+                            vertical-align: middle;
+                            border: 0;
+                            display: inline-block;
+                        }
+                    }
+                    div {
+                        position: absolute;
+                        top: 90px;
+                        left: -1px;
+                        display: none;
+                        width: 180px;
+                        padding: 20px 10px 15px;
+                        border-radius: 3px;
+                        box-shadow: 0 1px 10px 4px rgba(0, 0, 0, .05);
+                        background: #fff;
+                        b {
+                            position: absolute;
+                            top: -15px;
+                            left: 25px;
+                            z-index: 1;
+                            width: 30px;
+                            height: 15px;
+                            background: url(http://static.biyao.com/pc/common/img/master/triangle.png?v=biyao_5912cd0) no-repeat;
+                        }
+                        span {
+                            display: block;
+                            text-align: center;
+                            font-size: 16px;
+                            color: #333;
+                            padding-bottom: 20px;
+                            border-bottom: 1px solid #f2f2f2;
+                        }
+                        p {
+                            margin-top: 15px;
+                            font-size: 12px;
+                            color: #333;
+                            line-height: 20px;
+                        }
+                    }
+                }
+                ul {
+                    padding-top: 18px;
+                    li {
+                        margin-bottom: 10px;
+                        color: #333;
+                        i {
+                            color: #f7b200;
+                        }
+                    }
+                }
+            }
+            .supplier-into {
+                display: block;
+                width: 200px;
+                height: 40px;
+                margin-top: 20px;
+                line-height: 40px;
+                color: #fff;
+                font-size: 16px;
+                text-align: center;
+                background: #f7b200;
+                cursor: pointer;
+            }
+            .supplier-recommen {
+                overflow: hidden;
+                a {
+                    display: block;
+                }
+                li {
+                    margin-top: 40px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #ccc;
+                    a {
+                        text-decoration: none;
+                        cursor: pointer;
+                        outline: 0;
+                        i {
+                            display: block;
+                            width: 200px;
+                            height: 200px;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                        dl {
+                            display: block;
+                            margin-top: 20px;
+                            text-align: center;
+                            margin: 0;
+                            padding: 0;
+                            border: 0;
+                            list-style: none;
+                            display: block;
+                            font-size: 12px;
+                            dt {
+                                margin: 0;
+                                padding: 0;
+                                border: 0;
+                                list-style: none;
+                                display: block;
+                                font-size: 16px;
+                                color: #333;
+                            }
+                            dd {
+                                margin: 0;
+                                padding: 0;
+                                border: 0;
+                                list-style: none;
+                                display: block;
+                                margin-top: 10px;
+                                font-size: 16px;
+                                color: #f33;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .view-main {
+            float: left;
+            width: 800px;
+            padding: 40px 0 0 38px;
+            .view-detail {
+                display: block;
+                width: 100%;
+                .wrap {
+                    width: 800px;
+                    margin: 0;
+                    padding: 0;
+                    .imgText-property {
+                        width: 800px;
+                        margin: 0 auto 20px;
+                        dl {
+                            line-height: 32px;
+                            border-bottom: 2px dotted #cecece;
+                            font-size: 16px;
+                            color: #333;
+                            dt {
+                                display: inline-block;
+                                width: 160px;
+                                font-size: 16px;
+                                color: #666;
+                                vertical-align: top;
+                            }
+                            dd {
+                                display: inline-block;
+                                width: 630px;
+                                font-size: 16px;
+                                color: #333;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .view-evaluate {
+            .eval-select {
+                ul {
+                    float: left;
+                    li {
+                        display: inline-block;
+                        margin-right: 40px;
+                        font-size: 16px;
+                        color: #333;
+                        cursor: pointer;
+                        span {
+                            background: url(http://static2.biyao.com/pc/common/img/master/eval-select.png?v=biyao_5be7e87) no-repeat;
+                        }
+                    }
+                }
+                p {
+                    text-align: right;
+                    font-size: 16px;
+                    color: #333;
+                }
+            }
+            .eval-list {
+                li {
+                    width: 800px;
+                    height: 87px;
+                    float: left;
+                    margin-top: 30px;
+                    border-top: 1px solid #ccc;
+                    dl {
+                        float: left;
+                        margin: 20px 0 0 20px;
+                        dt {
+                            margin: 0;
+                            padding: 0;
+                            border: 0;
+                            list-style: none;
+                            display: block;
+                            img {
+                                display: inline-block;
+                                height: 40px;
+                                width: 40px;
+                                border-radius: 50%;
+                                overflow: hidden;
+                                vertical-align: middle;
+                                border: 0;
+                            }
+                        }
+                        dd{
+                            text-align: center;
+                            margin-top: 10px;
+                            font-size: 12px;
+                            color: #333;
+                        }
+                    }
+                    .eval-score{
+                        float: right;
+                    }
+                    .eval-content {
+                        margin: 35px 100px 0;
+                        p{
+                            font-size: 12px;
+                            color: #333;
+                            span{
+                                margin-right: 24px;
+                                color: gray;
+                            }
+                        }
+                        .eval-artical{
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

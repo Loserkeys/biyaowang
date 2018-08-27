@@ -52,6 +52,14 @@ legend {
 a {
   text-decoration: none; }
 
+.clearfix::after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
 .header-wrap {
   width: 100%;
   height: 30px;
@@ -160,6 +168,66 @@ a {
           font-size: 12px;
           color: #cccccc; }
 
+.retract-wrap {
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid #eae4e8;
+  background: #ffffff;
+  position: fixed;
+  z-index: 20;
+  top: 0; }
+  .retract-wrap .retract {
+    width: 1080px;
+    height: 60px;
+    margin: 0 auto;
+    overflow: hidden; }
+    .retract-wrap .retract .retract-left {
+      width: 100px;
+      height: 60px;
+      line-height: 60px;
+      vertical-align: middle;
+      float: left; }
+      .retract-wrap .retract .retract-left span {
+        display: block;
+        font-size: 16px;
+        color: gray;
+        float: left; }
+      .retract-wrap .retract .retract-left i {
+        display: inline-block;
+        width: 15px;
+        height: 8px;
+        margin-left: 10px;
+        background: url(http://static2.biyao.com/pc/common/img/master/categoryDown.png?v=biyao_58c52bc) no-repeat; }
+    .retract-wrap .retract .retract-right {
+      margin-top: 10px;
+      float: right;
+      width: 360px; }
+      .retract-wrap .retract .retract-right p {
+        position: relative;
+        z-index: 2;
+        background: #fff; }
+        .retract-wrap .retract .retract-right p input {
+          width: 298px;
+          height: 38px;
+          padding-left: 10px;
+          line-height: 38px;
+          color: #333;
+          border: 1px solid #e8e8e8;
+          font-size: 16px;
+          border-radius: 3px 0 0 3px;
+          vertical-align: middle; }
+        .retract-wrap .retract .retract-right p span {
+          display: inline-block;
+          position: absolute;
+          width: 39px;
+          height: 38px;
+          border: 1px solid #e8e8e8;
+          border-left: none;
+          vertical-align: middle;
+          border-radius: 0 3px 3px 0;
+          background: url(http://static.biyao.com/pc/common/img/master/search.png?v=biyao_2e92562) center center no-repeat;
+          cursor: pointer; }
+
 .nav-wrap {
   width: 100%;
   height: 105px;
@@ -204,7 +272,8 @@ a {
         right: 0;
         top: 30px;
         border-left: none;
-        border-radius: 0 5px 5px 0; }
+        border-radius: 0 5px 5px 0;
+        background: url(http://static.biyao.com/pc/common/img/master/search.png?v=biyao_2e92562) center center no-repeat; }
       .nav-wrap .nav-search .search-wrap .nav-list {
         width: 540px;
         height: 35px;
