@@ -210,10 +210,10 @@
         <div class="editor-main">
             <div class="editor-picture">
                 <p>
-                    <img src="http://bfs.biyao.com/group1/M00/00/6C/rBACVFkT4sGASgPEAAJVLA27Slw348.jpg" alt="">
+                    <img id="editor-picture-item" src="http://bfs.biyao.com/group1/M00/00/6C/rBACVFkT4sGASgPEAAJVLA27Slw348.jpg" alt="">
                 </p>
-                <ul>
-                    <li class="">
+                <ul class="editor-picture" id="editor-picture">
+                    <li class="main-avtive">
                         <img src="http://bfs.biyao.com/group1/M00/00/6C/rBACVFkT4sGASgPEAAJVLA27Slw348.jpg">
                     </li>
                     <li class="">
@@ -222,7 +222,7 @@
                     <li class="">
                         <img src="http://bfs.biyao.com/group1/M00/00/6B/wKhkVVkCsEWAWZOkAADh7j29WLM257.jpg">
                     </li>
-                    <li class="main-active">
+                    <li class="">
                         <img src="http://bfs.biyao.com/group1/M00/3A/6E/rBACW1sGM9yATZN5AAGEkwIMMIQ472.jpg">
                     </li>
                     <li class="">
@@ -268,7 +268,7 @@
                     <span>售价</span>
                     <div>
                         <span class="panel-maney">￥
-                            <i>199</i>
+                            <i id="goodPrice">199</i>
                         </span>
                         <span class="panel-duration">生产周期：
                             <b>5</b>天
@@ -282,34 +282,34 @@
                             <span class="panel-specs-item">颜色</span>
                             <div>
                                 <ul>
-                                    <li class="specs-detail" parent="true" nomod="true">黑色/白色
+                                    <li class="specs-detail lowModel-specs-active" parent="true" nomod="true" data-good-id="good1">黑色/白色
+                                        <em style="display:block"></em>
+                                    </li>
+                                    <li class="specs-detail" parent="true" nomod="true" data-good-id="good2">黑色/深灰
                                         <em></em>
                                     </li>
-                                    <li class="specs-detail" parent="true" nomod="true">黑色/深灰
+                                    <li class="specs-detail" parent="true" nomod="true" data-good-id="good3">黑色/藏青
                                         <em></em>
                                     </li>
-                                    <li class="specs-detail" parent="true" nomod="true">黑色/藏青
+                                    <li class="specs-detail" parent="true" nomod="true" data-good-id="good4">白色/深灰
                                         <em></em>
                                     </li>
-                                    <li class="specs-detail" parent="true" nomod="true">白色/深灰
+                                    <li class="specs-detail" parent="true" nomod="true" data-good-id="good5">白色/藏青
                                         <em></em>
                                     </li>
-                                    <li class="specs-detail" parent="true" nomod="true">白色/藏青
+                                    <li class="specs-detail" parent="true" nomod="true" data-good-id="good6">深灰/藏青
                                         <em></em>
                                     </li>
-                                    <li class="specs-detail" parent="true" nomod="true">深灰/藏青
+                                    <li class="specs-detail" parent="true" nomod="true" data-good-id="good7">2件/白色
                                         <em></em>
                                     </li>
-                                    <li class="specs-detail" parent="true" nomod="true">2件/白色
+                                    <li class="specs-detail" parent="true" nomod="true" data-good-id="good8">2件/黑色
                                         <em></em>
                                     </li>
-                                    <li class="specs-detail" parent="true" nomod="true">2件/黑色
+                                    <li class="specs-detail" parent="true" nomod="true" data-good-id="good9">白色/浅蓝
                                         <em></em>
                                     </li>
-                                    <li class="specs-detail" parent="true" nomod="true">白色/浅蓝
-                                        <em></em>
-                                    </li>
-                                    <li class="specs-detail lowModel-specs-active" parent="true" nomod="true">黑色/浅蓝
+                                    <li class="specs-detail" parent="true" nomod="true" data-good-id="good10">黑色/浅蓝
                                         <em></em>
                                     </li>
                                 </ul>
@@ -319,22 +319,22 @@
                             <span>尺寸</span>
                             <div>
                                 <ul>
-                                    <li class="specs-detail lowModel-specs-active" parent="false" nomod="true">S
+                                    <li class="specs-detail lowModel-specs-active" parent="false" nomod="true" data-good-id="size1">S
+                                        <em style="display:block"></em>
+                                    </li>
+                                    <li class="specs-detail" parent="false" nomod="true" data-good-id="size2">M
                                         <em></em>
                                     </li>
-                                    <li class="specs-detail" parent="false" nomod="true">M
+                                    <li class="specs-detail" parent="false" nomod="true" data-good-id="size3">L
                                         <em></em>
                                     </li>
-                                    <li class="specs-detail" parent="false" nomod="true">L
+                                    <li class="specs-detail" parent="false" nomod="true" data-good-id="size4">XL
                                         <em></em>
                                     </li>
-                                    <li class="specs-detail" parent="false" nomod="true">XL
+                                    <li class="specs-detail" parent="false" nomod="true" data-good-id="size5">XXL
                                         <em></em>
                                     </li>
-                                    <li class="specs-detail" parent="false" nomod="true">XXL
-                                        <em></em>
-                                    </li>
-                                    <li class="specs-detail" parent="false" nomod="true">XXXL
+                                    <li class="specs-detail" parent="false" nomod="true" data-good-id="size6">XXXL
                                         <em></em>
                                     </li>
                                 </ul>
@@ -354,16 +354,16 @@
                     <span class="panel-count-item">数量</span>
                     <div>
                         <p class="panel-num">
-                            <span class="panel-minus">-</span>
-                            <span class="panel-number">1</span>
-                            <span class="panel-add">+</span>
+                            <span class="panel-minus" id="panel-minus">-</span>
+                            <span class="panel-number" id="panel-number">1</span>
+                            <span class="panel-add" id="panel-add">+</span>
                         </p>
                     </div>
                 </li>
             </ul>
             <div class="panel-bottom">
                 <p id="buyNow" class="panel-buyNow">立即购买</p>
-                <p id="addShopCar">加入购物车</p>
+                <p class="addShopCar">加入购物车</p>
             </div>
         </div>
 
@@ -411,7 +411,7 @@
                 <a class="supplier-into" href="javascript:void(0)">进店看看</a>
                 <ul class="supplier-recommen">
                     <li>
-                        <a target="_blank" href="http://www.biyao.com/products/1300835252010100001-0.html">
+                        <a target="_blank" href="javascript:void(0)">
                             <i>
                                 <img src="http://bfs.biyao.com/group1/M00/4F/BE/rBACW1t9HOeALjXiAAB_wXI-Z68665.jpg">
                             </i>
@@ -423,7 +423,7 @@
                     </li>
 
                     <li>
-                        <a target="_blank" href="http://www.biyao.com/products/1300835010100100001-0.html">
+                        <a target="_blank" href="javascript:void(0)">
                             <i>
                                 <img src="http://bfs.biyao.com/group1/M00/23/C8/rBACW1oc4myAJV85AACPgeX4-WQ853.jpg">
                             </i>
@@ -435,7 +435,7 @@
                     </li>
 
                     <li>
-                        <a target="_blank" href="http://www.biyao.com/products/1300835181030100001-0.html">
+                        <a target="_blank" href="javascript:void(0)">
                             <i>
                                 <img src="http://bfs.biyao.com/group1/M00/2E/75/rBACVFqnZ9CAAiw4AAB2qFZzlKg230.jpg">
                             </i>
@@ -447,7 +447,7 @@
                     </li>
 
                     <li>
-                        <a target="_blank" href="http://www.biyao.com/products/1300835249010100001-0.html">
+                        <a target="_blank" href="javascript:void(0)">
                             <i>
                                 <img src="http://bfs.biyao.com/group1/M00/4A/75/rBACVFtxJe-AXktkAACCGpt6FLQ778.jpg">
                             </i>
@@ -459,7 +459,7 @@
                     </li>
 
                     <li>
-                        <a target="_blank" href="http://www.biyao.com/products/1300835067020100001-0.html">
+                        <a target="_blank" href="javascript:void(0)">
                             <i>
                                 <img src="http://bfs.biyao.com/group1/M00/1F/C6/rBACVFoBSCGACoquAACZuPRVKFk722.jpg">
                             </i>
@@ -471,7 +471,7 @@
                     </li>
 
                     <li>
-                        <a target="_blank" href="http://www.biyao.com/products/1300835231010100001-0.html">
+                        <a target="_blank" href="javascript:void(0)">
                             <i>
                                 <img src="http://bfs.biyao.com/group1/M00/47/9F/rBACYVtamiyAQLjZAACerWBFvW0662.jpg">
                             </i>
@@ -483,7 +483,7 @@
                     </li>
 
                     <li>
-                        <a target="_blank" href="http://www.biyao.com/products/1300835254010100001-0.html">
+                        <a target="_blank" href="javascript:void(0)">
                             <i>
                                 <img src="http://bfs.biyao.com/group1/M00/4F/C7/rBACW1t9M1GATImQAACO7h03NmA340.jpg">
                             </i>
@@ -495,7 +495,7 @@
                     </li>
 
                     <li>
-                        <a target="_blank" href="http://www.biyao.com/products/1300835233010100001-0.html">
+                        <a target="_blank" href="javascript:void(0)">
                             <i>
                                 <img src="http://bfs.biyao.com/group1/M00/3C/B8/rBACW1saRdWAIQBLAACNYgXjv94265.jpg">
                             </i>
@@ -507,7 +507,7 @@
                     </li>
 
                     <li>
-                        <a target="_blank" href="http://www.biyao.com/products/1300835155010100001-0.html">
+                        <a target="_blank" href="javascript:void(0)">
                             <i>
                                 <img src="http://bfs.biyao.com/group1/M00/3A/91/rBACW1sGzjiARlzuAACYJ6d88wI188.jpg">
                             </i>
@@ -1239,6 +1239,10 @@
     </div>
     <script src="../script/jquery-1.11.3.js"></script>
     <script src="../script/common.js"></script>
+    <script src="../script/jquery.cookie.js"></script>
+    <script src="../script/jquery.fly.js"></script>
+    <script src="../script/requestAnimationFrame.js"></script>
+    <script src="../script/gooddetails.js"></script>
 
 </body>
 

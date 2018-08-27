@@ -165,8 +165,8 @@ body {
           height: 100%; }
       .section .editor-main .editor-picture ul {
         float: left;
-        width: 80px;
-        height: 460px;
+        width: 82px;
+        height: 462px;
         overflow: hidden; }
         .section .editor-main .editor-picture ul li {
           height: 80px;
@@ -178,6 +178,8 @@ body {
           .section .editor-main .editor-picture ul li img {
             max-width: 100%;
             max-height: 100%; }
+        .section .editor-main .editor-picture ul .main-avtive {
+          border: 1px solid #523669; }
     .section .editor-main .editor-policy {
       margin-top: 15px;
       font-size: 12px; }
@@ -307,6 +309,16 @@ body {
                 padding: 0 23px;
                 font-size: 14px;
                 cursor: pointer; }
+                .section .editor-panel .panel-main .panel-specs .specs-dimension-wrap .specs-dimension div ul li em {
+                  position: absolute;
+                  bottom: 0;
+                  right: 0;
+                  display: none;
+                  width: 22px;
+                  height: 22px;
+                  background: url(http://static.biyao.com/pc/common/img/master/specs-active.png?v=biyao_99d793b) no-repeat; }
+          .section .editor-panel .panel-main .panel-specs .specs-dimension-wrap .specs-dimension .lowModel-specs-active {
+            border: 1px solid #523669; }
       .section .editor-panel .panel-main .panel-sizeImg {
         width: 465px;
         height: 16px;
@@ -340,7 +352,8 @@ body {
               text-align: center;
               line-height: 26px;
               font-size: 14px;
-              color: #000; }
+              color: #000;
+              cursor: pointer; }
             .section .editor-panel .panel-main .panel-count div .panel-num .panel-minus {
               border-right: 1px solid #e4e3e5; }
             .section .editor-panel .panel-main .panel-count div .panel-num .panel-add {
