@@ -1,0 +1,158 @@
+@import "./_reset.scss"; // 全局样式
+body {
+    width: 100%;
+}
+
+//购物进度条
+.shopStepBox {
+    width: 560px;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    .publicStepsbox {
+        width: 100%;
+        div {
+            background: url(http://static.biyao.com/pc/buy/img/car_steps.png?v=biyao_64ace71) left center no-repeat;
+            width: 560px;
+            height: 20px;
+            background-position: -30px -23px;
+        }
+        ul {
+            margin-top: 3px;
+            li {
+                width: 140px;
+                float: left;
+                height: 19px;
+                line-height: 19px;
+                color: #666;
+                text-align: center;
+                color: #d5cdda;
+                font-size: 12px;
+            }
+            .checked {
+                color: #724a88;
+            }
+        }
+    }
+}
+
+.border-bottom {
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+}
+
+// 购物车
+.buyCar-wrap {
+    width: 1080px;
+    overflow: hidden;
+    margin: 0 auto;
+    .buyCar-item {
+        width: 1080px;
+        height: 24px;
+        border-bottom: 1px solid #d5cdda;
+        line-height: 24px;
+        padding: 30px 0 10px 0;
+        text-align: left;
+        span {
+            margin-left: 10px;
+            display: inline-block;
+            color: #523669;
+            font-size: 18px;
+        }
+    }
+}
+
+// 购物车商品详情
+.goodBuyCar-wrap {
+    width: 1080px;
+    margin: 0 auto;
+    .comment_box {
+        width: 1080px;
+        ul {
+            width: 1080px;
+            height: 37px;
+            li {
+                height: 37px;
+                float: left;
+                line-height: 37px;
+                font-size: 12px;
+                text-align: center;
+                color: #523669;
+            }
+        }
+    }
+    .shoppingBox {
+        width: 1080px;
+        overflow: hidden;
+        .shopStore {
+            width: 1080px;
+            height: 37px;
+            font-size: 12px;
+            color: #523669;
+            background: #ccc;
+            line-height: 37px;
+        }
+        ul {
+            width: 1080px;
+            height: 120px;
+            border-bottom: 1px dashed #cccccc;
+            li {
+                float: left;
+                line-height: 120px;
+                vertical-align: middle;
+                i {
+                    float: left;
+                    margin-top: 52px;
+                }
+                p {
+                    float: left;
+                    width: 100px;
+                    height: 100px;
+                    margin-top: 10px;
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                b {
+                    display: block;
+                    width: 100%;
+                    height: 20px;
+                    font-size: 12px;
+                    color: #f49f26;
+                    text-align: center;
+                }
+            }
+            ul {
+                width: 100%;
+                height: 90px;
+                margin-top: 30px;
+                border: none;
+                li {
+                    float: none;
+                    height: 20px;
+                    line-height: 20px;
+                    font-size: 12px;
+                    color: #999999;
+                }
+            }
+        }
+    }
+}
+
+// 选中 i
+.checked {
+    vertical-align: middle;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 10px;
+    background: url(http://static4.biyao.com/pc/common/img/commonSprite.png?v=biyao_5aacedb) no-repeat -20px -80px;
+}
+
+// 左对齐
+.text-L {
+    text-align: left;
+}

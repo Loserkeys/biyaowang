@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车页</title>
+    <link href="http://static.biyao.com/pc/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="../style/common.css">
+    <link rel="stylesheet" href="../style/goodshopcar.css">
+
+</head>
+
+<body>
+    <!-- 顶部栏  -->
+    <div class="header header-wrap">
+        <div class="clearfix">
+            <ul class="header-left">
+                <li>
+                    <a href="javascript:void(0)">首页</a>
+                    <b></b>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">平台政策</a>
+                    <b></b>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">商家入驻</a>
+                </li>
+            </ul>
+            <ul class="header-right">
+                <li class="right-user">
+                    <a href="javascript:void(0)" class="login">登录</a>
+                    <a href="javascript:void(0)" class="regist">注册</a>
+                    <b></b>
+                </li>
+                <li class="right-downApp">
+                    <a href="javascript:void(0)">下载必要APP</a>
+                    <b></b>
+                    <div class="downApp">
+                        <img src="../img/1.png" alt="" class="img1">
+                        <p>买大牌制造产品</p>
+                        <p>上必要</p>
+                        <img src="../img/2.png" alt="" class="img2">
+                    </div>
+                </li>
+                <li class="right-msg">
+                    <a href="javascript:void(0)">消息中心</a>
+                    <span>0</span>
+                    <b></b>
+                </li>
+                <li class="right-server">
+                    <a href="javascript:void(0)">客户服务</a>
+                    <b></b>
+                    <div>
+                        <p>我的客服</p>
+                    </div>
+                </li>
+                <li class="right-shopCar">
+                    <a href="javascript:void(0)">购物车</a>
+                    <span class="num" id="buyNum">0</span>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+    <!-- 导航栏 -->
+    <div class="nav-wrap ">
+        <div class="nav-search">
+            <h1 class="logo">
+                <a href="javascript:void(0)"></a>
+            </h1>
+            <div class="shopStepBox">
+                <div class="publicStepsbox">
+                    <div class="car_step_icon car_step1"></div>
+                    <ul class="clearfix car_step_txt">
+                        <li class="checked">查看购物车</li>
+                        <li>确认订单信息</li>
+                        <li>在线付款</li>
+                        <li>收货并评价</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="border-bottom"></div>
+
+    <!-- 购物车 -->
+    <div class="buyCar-wrap clearfix">
+        <div class="buyCar-item">
+            <span>购物车</span>
+        </div>
+    </div>
+    <!-- 购物车商品详情 -->
+    <div class="goodBuyCar-wrap">
+        <div class="comment_box clearfix">
+            <ul>
+                <li class="text-L" style="width:15% ">
+                    <i class="checked"></i>
+                    <span>全选</span>
+                </li>
+                <li class="text-L" style="width:40%">商品信息</li>
+                <li style="width:10%">单价</li>
+                <li style="width:20%">数量</li>
+                <li style="width:10%">小计</li>
+                <li style="width:5%">操作</li>
+            </ul>
+        </div>
+        <div class="shoppingBox clearfix">
+            <div class="shopStore">
+                <i class="checked"></i>
+                <span class="inline">商家：</span>
+                <span id="J_product_name " class="inline col_666">亓口</span>
+            </div>
+            <ul>
+                <li class="text-L" style="width:15% ">
+                    <i class="checked"></i>
+                    <p>
+                        <img src="http://bfs.biyao.com/group1/M00/00/6C/rBACVFkT4sGASgPEAAJVLA27Slw348.jpg" alt="">
+                    </p>
+                </li>
+                <li class="text-L" style="width:40%">
+                    <ul>
+                        <li>80s</li>
+                        <li>颜色</li>
+                        <li>尺寸</li>
+                    </ul>
+                </li>
+                <li style="width:10%">
+                    <b>￥199</b>
+                </li>
+                <li style="width:20%">
+                    <div>
+                        <p>+</p>
+                        <input type="text">
+                        <p>-</p>
+                    </div>
+                </li>
+                <li style="width:10%">
+                    <b>￥199</b>
+                </li>
+                <li style="width:5%">X</li>
+            </ul>
+
+        </div>
+
+    </div>
+    <!-- 底部栏 -->
+    <div class="footer-wrap">
+        <div class="footer">
+            <ul class="footer-server">
+                <li>
+                    <dl>
+                        <dt style="background: url(http://static.biyao.com/pc/common/img/master/serve-make.png?v=biyao_af9ffe1) no-repeat"></dt>
+                        <dd>直联一线制造</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt style="background: url(http://static2.biyao.com/pc/common/img/master/serve-backage.png?v=biyao_e2de7c6) no-repeat"></dt>
+                        <dd>全品类包邮</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt style="background: url(http://static4.biyao.com/pc/common/img/master/serve-pay.png?v=biyao_77dd9d9) no-repeat"></dt>
+                        <dd>平台先行赔付</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt style="background: url(http://static1.biyao.com/pc/common/img/master/serve-refund.png?v=biyao_2c6f2c2) no-repeat"></dt>
+                        <dd>7天无忧退换货</dd>
+                    </dl>
+                </li>
+            </ul>
+            <div class="footer-main">
+                <ul class="footer-main-left">
+                    <li>
+                        <p>帮助中心</p>
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)">平台政策</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">商家入驻</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>关注必要</p>
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)">官方微信</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">新浪微博</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>关于必要</p>
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)">了解必要</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">加入必要</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">联系我们</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <p>下载必要APP</p>
+                        <h3></h3>
+                    </li>
+
+                </ul>
+                <dl class="footer-main-right">
+                    <dt>服务监督邮箱</dt>
+                    <dd>cs@biyao.com</dd>
+                </dl>
+            </div>
+            <div class="footer-info">
+                <p>
+                    <span id="year"></span>
+                    <script>
+                        document.getElementById('year').innerHTML =
+                            `Copyright © ${new Date().getFullYear()}, BIYAO.COM`
+                    </script>
+                    <span>珠海必要科技有限公司</span>
+                    <span>粤网文〔2018〕0969-419号</span>
+                    <span></span>
+                    <span>粤ICP备13088531号-2</span>
+                </p>
+                <p>
+                    <span>互联网药品信息服务资格证书</span>
+                    <span>食品经营许可证</span>
+                </p>
+                <p>
+                    <span>公司地址：珠海市唐家湾镇哈工大路1号1栋E301-15</span>
+                    <span>公司电话：0756-3635580</span>
+                </p>
+                <p>
+                    <span>必要商城提示您，产品“由某制造商出品”仅为陈述制造商既往生产经历，并不意味着相应产品与特定品牌产品相同或近似。</span>
+                </p>
+
+            </div>
+
+
+        </div>
+    </div>
+    <script src="../script/jquery-1.11.3.js"></script>
+    <script src="../script/common.js"></script>
+    <script src="../script/jquery.cookie.js"></script>
+    <script src="../script/gooddetails.js"></script>
+
+</body>
+
+</html>
