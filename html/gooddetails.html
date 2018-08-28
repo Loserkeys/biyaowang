@@ -58,7 +58,7 @@
                 </li>
                 <li class="right-shopCar">
                     <a href="javascript:void(0)">购物车</a>
-                    <span class="num">0</span>
+                    <span class="num" id="buyNum">0</span>
                 </li>
             </ul>
 
@@ -207,12 +207,21 @@
 
     <!-- 商品选择详情 -->
     <div class="section clearfix">
+        <div class="bigBox">
+            <img class="editor-picture-item" src="http://bfs.biyao.com/group1/M00/00/6C/rBACVFkT4sGASgPEAAJVLA27Slw348.jpg" alt="">
+        </div>
+
         <div class="editor-main">
             <div class="editor-picture">
-                <p>
-                    <img id="editor-picture-item" src="http://bfs.biyao.com/group1/M00/00/6C/rBACVFkT4sGASgPEAAJVLA27Slw348.jpg" alt="">
-                </p>
-                <ul class="editor-picture" id="editor-picture">
+                <div class="smallBox">
+                    <div class="wrap"></div>
+                    <img id="editor-picture-item" class="editor-picture-item" src="http://bfs.biyao.com/group1/M00/00/6C/rBACVFkT4sGASgPEAAJVLA27Slw348.jpg"
+                        alt="">
+                    <span class="grayBox"></span>
+                </div>
+
+
+                <ul id="editor-picture">
                     <li class="main-avtive">
                         <img src="http://bfs.biyao.com/group1/M00/00/6C/rBACVFkT4sGASgPEAAJVLA27Slw348.jpg">
                     </li>
@@ -259,7 +268,7 @@
         </div>
         <div class="editor-panel sku">
             <div class="panel-top">
-                <h1>80S双面布丝光柔滑短T（2件装）5005</h1>
+                <h1 id="goodName">80S双面布丝光柔滑短T（2件装）5005</h1>
                 <p>80S/1双面布纯棉面料，舒适柔软，质感细腻，吸汗透气</p>
                 <span class="manufacturer">Givenchy制造商直供</span>
             </div>
