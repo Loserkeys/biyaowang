@@ -1,158 +1,313 @@
 @import "./_reset.scss"; // 全局样式
 body {
-    width: 100%;
+  width: 100%;
 }
 
 //购物进度条
 .shopStepBox {
-    width: 560px;
-    position: absolute;
-    right: 0;
-    top: 35px;
-    .publicStepsbox {
-        width: 100%;
-        div {
-            background: url(http://static.biyao.com/pc/buy/img/car_steps.png?v=biyao_64ace71) left center no-repeat;
-            width: 560px;
-            height: 20px;
-            background-position: -30px -23px;
-        }
-        ul {
-            margin-top: 3px;
-            li {
-                width: 140px;
-                float: left;
-                height: 19px;
-                line-height: 19px;
-                color: #666;
-                text-align: center;
-                color: #d5cdda;
-                font-size: 12px;
-            }
-            .checked {
-                color: #724a88;
-            }
-        }
+  width: 560px;
+  position: absolute;
+  right: 0;
+  top: 35px;
+  .publicStepsbox {
+    width: 100%;
+    div {
+      background: url(http://static.biyao.com/pc/buy/img/car_steps.png?v=biyao_64ace71)
+        left center no-repeat;
+      width: 560px;
+      height: 20px;
+      background-position: -30px -23px;
     }
+    ul {
+      margin-top: 3px;
+      li {
+        width: 140px;
+        float: left;
+        height: 19px;
+        line-height: 19px;
+        color: #666;
+        text-align: center;
+        color: #d5cdda;
+        font-size: 12px;
+      }
+      .buystatus {
+        color: #724a88;
+      }
+    }
+  }
 }
 
 .border-bottom {
-    width: 100%;
-    height: 1px;
-    background: #ccc;
+  width: 100%;
+  height: 1px;
+  background: #ccc;
 }
 
 // 购物车
 .buyCar-wrap {
+  width: 1080px;
+  overflow: hidden;
+  margin: 0 auto;
+  .buyCar-item {
     width: 1080px;
-    overflow: hidden;
-    margin: 0 auto;
-    .buyCar-item {
-        width: 1080px;
-        height: 24px;
-        border-bottom: 1px solid #d5cdda;
-        line-height: 24px;
-        padding: 30px 0 10px 0;
-        text-align: left;
-        span {
-            margin-left: 10px;
-            display: inline-block;
-            color: #523669;
-            font-size: 18px;
-        }
+    height: 24px;
+    border-bottom: 1px solid #d5cdda;
+    line-height: 24px;
+    padding: 30px 0 10px 0;
+    text-align: left;
+    span {
+      margin-left: 10px;
+      display: inline-block;
+      color: #523669;
+      font-size: 18px;
     }
+  }
 }
 
 // 购物车商品详情
 .goodBuyCar-wrap {
+  width: 1080px;
+  margin: 0 auto;
+  .comment_box {
     width: 1080px;
-    margin: 0 auto;
-    .comment_box {
-        width: 1080px;
-        ul {
-            width: 1080px;
-            height: 37px;
-            li {
-                height: 37px;
-                float: left;
-                line-height: 37px;
-                font-size: 12px;
-                text-align: center;
-                color: #523669;
-            }
-        }
+    ul {
+      width: 1080px;
+      height: 37px;
+      li {
+        height: 37px;
+        float: left;
+        line-height: 37px;
+        font-size: 12px;
+        text-align: center;
+        color: #523669;
+      }
+      .text-L {
+        text-align: left;
+      }
     }
-    .shoppingBox {
-        width: 1080px;
-        overflow: hidden;
-        .shopStore {
-            width: 1080px;
-            height: 37px;
+  }
+  .shoppingBox {
+    width: 1080px;
+    overflow: hidden;
+    .commodityHints{
+      width: 1080px;
+      height: 120px;
+      font-size: 30px;
+      text-align: center;
+      line-height: 120px;
+      color: gray;
+    }
+    .shopStore {
+      width: 1080px;
+      height: 37px;
+      font-size: 12px;
+      color: #523669;
+      background: #ccc;
+      line-height: 37px;
+    }
+    .shopgood {
+      width: 1080px;
+      height: 120px;
+      border-bottom: 1px dashed #cccccc;
+      li {
+        height: 120px;
+        float: left;
+        vertical-align: middle;
+      }
+      .goodsLi1 {
+        i {
+          float: left;
+          margin-top: 52px;
+        }
+        p {
+          float: left;
+          width: 100px;
+          height: 100px;
+          margin-top: 10px;
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .goodsLi2 {
+        ul {
+          width: 100%;
+          height: 90px;
+          margin-top: 30px;
+          border: none;
+          li {
+            float: none;
+            height: 20px;
+            line-height: 20px;
             font-size: 12px;
+            color: #999999;
+          }
+          .goodsLi2-active {
             color: #523669;
-            background: #ccc;
-            line-height: 37px;
+            margin-bottom: 5px;
+          }
         }
-        ul {
-            width: 1080px;
-            height: 120px;
-            border-bottom: 1px dashed #cccccc;
-            li {
-                float: left;
-                line-height: 120px;
-                vertical-align: middle;
-                i {
-                    float: left;
-                    margin-top: 52px;
-                }
-                p {
-                    float: left;
-                    width: 100px;
-                    height: 100px;
-                    margin-top: 10px;
-                    img {
-                        display: block;
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-                b {
-                    display: block;
-                    width: 100%;
-                    height: 20px;
-                    font-size: 12px;
-                    color: #f49f26;
-                    text-align: center;
-                }
-            }
-            ul {
-                width: 100%;
-                height: 90px;
-                margin-top: 30px;
-                border: none;
-                li {
-                    float: none;
-                    height: 20px;
-                    line-height: 20px;
-                    font-size: 12px;
-                    color: #999999;
-                }
-            }
+      }
+      .goodsLi3 {
+        b {
+          display: block;
+          width: 100%;
+          height: 20px;
+          font-size: 12px;
+          color: #f49f26;
+          text-align: center;
+          margin-top: 50px;
         }
+      }
+      .goodsLi4 {
+        position: relative;
+        div {
+          position: absolute;
+          width: 104px;
+          height: 30px;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+          border: 1px solid #ccc;
+          p {
+            width: 27px;
+            height: 30px;
+            text-align: center;
+          }
+          .reduce {
+            float: left;
+            border-right: 1px solid #cccccc;
+            background: url(http://static.biyao.com/pc/common/img/commonSprite.png?v=biyao_5aacedb)
+              no-repeat 5px -40px;
+          }
+          .add {
+            float: right;
+            border-left: 1px solid #ccc;
+            background: url(http://static1.biyao.com/pc/common/img/commonSprite.png?v=biyao_5aacedb)
+              no-repeat -16px -40px;
+          }
+          input {
+            float: left;
+            display: block;
+            width: 48px;
+            height: 30px;
+            border: none;
+            text-align: center;
+          }
+        }
+      }
+      .goodsLi6 {
+        position: relative;
+        a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+          width: 12px;
+          height: 12px;
+          background: url(http://static3.biyao.com/pc/buy/img/a_delete.png?v=biyao_855a7e3) -10px -32px
+            no-repeat;
+          display: block;
+        }
+      }
     }
+    .shopCar-statistics {
+      width: 1080px;
+      height: 32px;
+      padding: 10px 0;
+      line-height: 32px;
+      font-size: 12px;
+      .shopCar-statistics-left {
+        height: 32px;
+        width: 300px;
+        float: left;
+        a {
+          width: 20px;
+          height: 20px;
+          margin: 0 10px;
+        }
+      }
+      .shopCar-statistics-right {
+        height: 32px;
+        width: 300px;
+        float: right;
+        text-align: center;
+        font-size: 14px;
+        dt {
+          width: 150px;
+          float: left;
+        }
+        dd {
+          width: 150px;
+          float: right;
+        }
+        span {
+          padding: 0 5px;
+          color: #f49f26;
+        }
+      }
+    }
+    .shopCar-buy {
+      width: 1060px;
+      padding: 0 10px;
+      height: 50px;
+      border-top: 1px solid #d5cdda;
+      background: #eeecef;
+      .goonShopping{
+        display:block;
+        width: 100px;
+        height: 33px;
+        background: #724a88;
+        line-height: 33px;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        float: left;
+        margin-top: 8px;
+      }
+      .tallyBTnPos{
+        display: block;
+        width: 85px;
+        height: 33px;
+        line-height: 33px;
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        background: #f49f26;
+        float: right;
+        margin-top: 8px;
+
+      }
+      p{
+          float: right;
+          margin-right: 30px;
+          height: 50px;
+          line-height: 50px;
+          font-size: 14px;
+          color: gray;
+          span{
+              padding:0 10px;
+              font-size: 20px;
+              color: #f49f26;
+          }
+      }
+    }
+  }
 }
 
 // 选中 i
 .checked {
-    vertical-align: middle;
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin: 0 10px;
-    background: url(http://static4.biyao.com/pc/common/img/commonSprite.png?v=biyao_5aacedb) no-repeat -20px -80px;
-}
-
-// 左对齐
-.text-L {
-    text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  margin: 0 10px;
+  background: url(http://static4.biyao.com/pc/common/img/commonSprite.png?v=biyao_5aacedb)
+    no-repeat -20px -80px;
 }
