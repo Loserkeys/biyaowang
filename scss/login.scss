@@ -34,6 +34,7 @@ body {
     }
 }
 
+//登录框
 .account-main {
     width: 400px;
     margin: 0 auto;
@@ -65,6 +66,9 @@ body {
             font-weight: normal;
             color: #808080;
             float: right;
+        }
+        .login-checked{
+            color: #523669;
         }
     }
     ul {
@@ -125,6 +129,33 @@ body {
             color: #fff;
             cursor: pointer;
             background: #F49F26;
+        }
+    }
+    .hide{
+        display: none;
+    }
+    .login-third{
+        margin-top: 40px!important;
+        text-align: center;
+        span{
+            display: inline-block;
+            margin-right: 10px;
+            font-size: 14px;
+            color: #666;
+            vertical-align: middle;
+        }
+        a{
+            display: inline-block;
+            width: 100px;
+            height: 32px;
+            border-left: 1px solid #ddd;
+            color: #333;
+            background: url(http://static3.biyao.com/pc/common/img/master/weix.jpg?v=biyao_4db9847) no-repeat;
+            vertical-align: middle;
+        }
+        .third-qq{
+            margin-left: 10px;
+            background: url(http://static4.biyao.com/pc/common/img/master/qq.jpg?v=biyao_16b2004) no-repeat;
         }
     }
     .biyao-caution {

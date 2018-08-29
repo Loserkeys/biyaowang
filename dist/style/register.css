@@ -81,43 +81,15 @@ body {
 
 .account-main {
   width: 400px;
-  margin: 0 auto;
-  background: #f9f9f9; }
-  .account-main .account-title {
-    margin-top: 30px;
-    font-size: 20px;
-    color: #523669;
-    overflow: hidden; }
-    .account-main .account-title b {
-      display: block;
-      width: 25px;
-      height: 25px;
-      margin-right: 10px;
-      float: left;
-      background: url(http://static.biyao.com/pc/common/img/master/sprit_biyao.png?v=biyao_653b0c0) no-repeat;
-      background-position: 0 -521px; }
-    .account-main .account-title p {
-      font-size: 20px;
-      width: 90px;
-      float: left; }
-    .account-main .account-title a {
-      margin-top: 5px;
-      margin-left: 15px;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: normal;
-      color: #808080;
-      float: right; }
-    .account-main .account-title .login-checked {
-      color: #523669; }
+  height: 580px;
+  margin: 0 auto; }
   .account-main ul {
     margin: 0;
     padding: 0;
     border: 0;
     list-style: none;
     display: block;
-    font-size: 12px;
-    clear: both; }
+    font-size: 12px; }
     .account-main ul li {
       position: relative;
       margin-top: 20px; }
@@ -132,25 +104,49 @@ body {
         background: #fff;
         outline: 0;
         vertical-align: middle; }
-      .account-main ul li .account-error {
-        position: absolute;
-        right: -315px;
-        top: 0;
-        display: block;
-        width: 300px;
-        height: 40px;
-        font-size: 12px;
-        line-height: 40px;
-        color: #F33; }
-    .account-main ul .login-auto span {
+    .account-main ul .account-title {
+      font-size: 20px;
+      color: #523669; }
+      .account-main ul .account-title b {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+        vertical-align: middle;
+        background: url(http://static.biyao.com/pc/common/img/master/sprit_biyao.png?v=biyao_653b0c0) no-repeat;
+        background-position: 0 -521px; }
+    .account-main ul .account-phoneCode input {
+      width: 200px; }
+    .account-main ul .account-phoneCode span {
+      float: right;
+      height: 40px;
+      width: 140px;
+      margin-left: 17px;
+      line-height: 40px;
+      color: #fff;
+      text-align: center;
+      background-color: #724A88;
+      font-size: 15px;
+      cursor: pointer; }
+    .account-main ul .regist-agree span {
+      display: inline-block;
+      margin-right: 10px;
       color: #8a8a8a;
       cursor: pointer; }
-      .account-main ul .login-auto span b {
+      .account-main ul .regist-agree span .regist-yes {
+        display: inline-block;
         width: 15px;
         height: 15px;
         margin-right: 10px;
-        vertical-align: middle;
-        background: url(http://static1.biyao.com/pc/common/img/master/commonSprite.png?v=biyao_eed067d) no-repeat 0 -80px; }
+        vertical-align: bottom;
+        background: url(http://static1.biyao.com/pc/common/img/master/commonSprite.png?v=biyao_eed067d) no-repeat -20px -80px; }
+    .account-main ul .regist-agree a {
+      margin-left: 10px;
+      color: #07a6df; }
+    .account-main ul .account-prompt {
+      margin-top: 10px !important;
+      padding: 6px 0;
+      color: #F49F26; }
     .account-main ul .account-btn {
       height: 50px;
       margin-top: 10px !important;
@@ -160,34 +156,15 @@ body {
       color: #fff;
       cursor: pointer;
       background: #F49F26; }
-  .account-main .hide {
-    display: none; }
-  .account-main .login-third {
-    margin-top: 40px !important;
-    text-align: center; }
-    .account-main .login-third span {
-      display: inline-block;
-      margin-right: 10px;
-      font-size: 14px;
-      color: #666;
-      vertical-align: middle; }
-    .account-main .login-third a {
-      display: inline-block;
-      width: 100px;
-      height: 32px;
-      border-left: 1px solid #ddd;
-      color: #333;
-      background: url(http://static3.biyao.com/pc/common/img/master/weix.jpg?v=biyao_4db9847) no-repeat;
-      vertical-align: middle; }
-    .account-main .login-third .third-qq {
-      margin-left: 10px;
-      background: url(http://static4.biyao.com/pc/common/img/master/qq.jpg?v=biyao_16b2004) no-repeat; }
-  .account-main .biyao-caution {
-    margin-top: 20px;
-    color: #FF3333;
-    line-height: 15px;
-    font-size: 12px; }
-    .account-main .biyao-caution img {
-      margin-right: 6px;
-      vertical-align: middle;
-      line-height: 15px; }
+  .account-main .input-error {
+    border: 1px solid #F49F26; }
+  .account-main .account-error {
+    position: absolute;
+    right: -315px;
+    top: 0;
+    display: block;
+    width: 300px;
+    height: 40px;
+    font-size: 12px;
+    line-height: 40px;
+    color: #F33; }
