@@ -80,7 +80,7 @@ $(function () {
     new GoodsList();
 
     // 吸顶菜单
-    
+
     function retract() {
         $(document).on('scroll', function () {
             if ($(document).scrollTop() > 150) {
@@ -91,4 +91,28 @@ $(function () {
         })
     }
     retract()
+
+
+
+    //加载页面时初始化购物车数量
+
+    function loadShopCar() {
+        var shopCarStr = $.cookie("byShopCar") ? $.cookie("byShopCar") : "";
+        var shopCarObj = shopCarStrToObj(shopCarStr);
+        // 获取购物车中商品的数量
+        var total = 0;
+        for (var id in shopCarObj) {
+            total += shopCarObj[id].num;
+        }
+        $(".num").html(total);
+    }
+    //  把cookie从字符串转为对象
+    function shopCarStrToObj(str) {
+        if (!str) {
+            return {};
+        }
+        return JSON.parse(str);
+    }
+
+    loadShopCar();
 })

@@ -3,7 +3,7 @@ $(() => {
   function goodTab() {
     $("#editor-picture")
       .children("li")
-      .on("click", function() {
+      .on("click", function () {
         $(this)
           .addClass("main-avtive")
           .siblings()
@@ -120,7 +120,7 @@ $(() => {
       this.addShopCar(); //加入购物车;
     },
     goodSpecification() {
-      this.$detail.on("click", function() {
+      this.$detail.on("click", function () {
         $(this)
           .addClass("lowModel-specs-active")
           .siblings()
@@ -136,11 +136,11 @@ $(() => {
     },
     goodNum() {
       let num = parseInt($("#panel-number").html());
-      $("#panel-add").on("click", function() {
+      $("#panel-add").on("click", function () {
         num += 1;
         $("#panel-number").html(num);
       });
-      $("#panel-minus").on("click", function() {
+      $("#panel-minus").on("click", function () {
         if (num == 1) {
           $("#panel-number").html(num);
         } else {
@@ -150,56 +150,55 @@ $(() => {
       });
     },
     addShopCar() {
-      this.$addShopCar.on( "click",function(e) {
-          // 商品ID
-          var goodId = `${$(".lowModel-specs-active").eq(0).attr("data-good-id")}
+      this.$addShopCar.on("click", function (e) {
+        // 商品ID
+        var goodId = `${$(".lowModel-specs-active").eq(0).attr("data-good-id")}
                         ${$(".lowModel-specs-active").eq(1).attr("data-good-id")}
                         `;
-          // 图片地址
-          var goodImgSrc = $("#editor-picture-item").attr("src");
-          //商品名字
-          var goodName = $("#goodName").text();
-          // 商品颜色
-          var goodColor = $(".lowModel-specs-active")
-            .eq(0)
-            .text();
-          // 商品尺寸
-          var goodSize = $(".lowModel-specs-active")
-            .eq(1)
-            .text();
-          // 商品单价
-          var goodPrice = parseFloat($("#goodPrice").text());
-          // 商品数量
-          var goodNum = parseFloat($("#panel-number").text());
-          // 店铺名字
-          var storeName = $("#shopStoreName").text();
+        // 图片地址
+        var goodImgSrc = $("#editor-picture-item").attr("src");
+        //商品名字
+        var goodName = $("#goodName").text();
+        // 商品颜色
+        var goodColor = $(".lowModel-specs-active")
+          .eq(0)
+          .text();
+        // 商品尺寸
+        var goodSize = $(".lowModel-specs-active")
+          .eq(1)
+          .text();
+        // 商品单价
+        var goodPrice = parseFloat($("#goodPrice").text());
+        // 商品数量
+        var goodNum = parseFloat($("#panel-number").text());
+        // 店铺名字
+        var storeName = $("#shopStoreName").text();
 
-          var shopCarStr = $.cookie("byShopCar") ? $.cookie("byShopCar") : "";
-          var shopCarObj = this.shopCarStrToObj(shopCarStr);
-          if (goodId in shopCarObj) {
-            shopCarObj[goodId].num = shopCarObj[goodId].num + goodNum;
-          } else {
-            shopCarObj[goodId] = {
-              img: goodImgSrc,
-              name: goodName,
-              color: goodColor,
-              size: goodSize,
-              price: goodPrice,
-              num: goodNum,
-              store: storeName
-            };
-          }
-          shopCarStr = JSON.stringify(shopCarObj);
-          $.cookie("byShopCar", shopCarStr, {
-            expires: 7,
-            path: "/"
-          });
+        var shopCarStr = $.cookie("byShopCar") ? $.cookie("byShopCar") : "";
+        var shopCarObj = this.shopCarStrToObj(shopCarStr);
+        if (goodId in shopCarObj) {
+          shopCarObj[goodId].num = shopCarObj[goodId].num + goodNum;
+        } else {
+          shopCarObj[goodId] = {
+            img: goodImgSrc,
+            name: goodName,
+            color: goodColor,
+            size: goodSize,
+            price: goodPrice,
+            num: goodNum,
+            store: storeName
+          };
+        }
+        shopCarStr = JSON.stringify(shopCarObj);
+        $.cookie("byShopCar", shopCarStr, {
+          expires: 7,
+          path: "/"
+        });
 
-          shopCarStr = $.cookie("byShopCar") ? $.cookie("byShopCar") : "";
-          shopCarObj = this.shopCarStrToObj(shopCarStr);
-          loadShopCar();
-        }.bind(this)
-      );
+        shopCarStr = $.cookie("byShopCar") ? $.cookie("byShopCar") : "";
+        shopCarObj = this.shopCarStrToObj(shopCarStr);
+        loadShopCar();
+      }.bind(this));
     },
     shopCarStrToObj(str) {
       if (!str) {
@@ -243,28 +242,10 @@ $(() => {
     //     }.bind(this))
     // },
   };
+
   new ShoppingCarPlus().init();
 
-  //加载页面时初始化购物车数量
-  function loadShopCar() {
-    var shopCarStr = $.cookie("byShopCar") ? $.cookie("byShopCar") : "";
-    var shopCarObj = shopCarStrToObj(shopCarStr);
-    // 获取购物车中商品的数量
-    var total = 0;
-    for (var id in shopCarObj) {
-      total += shopCarObj[id].num;
-    }
-    $("#buyNum").html(total);
-  }
-  //  把cookie从字符串转为对象
-  function shopCarStrToObj(str) {
-    if (!str) {
-      return {};
-    }
-    return JSON.parse(str);
-  }
 
-  loadShopCar();
 
 
 
@@ -368,123 +349,150 @@ $(() => {
       this.totalPrice();
     }
     // 计算价格
-    totalPrice(){
-        $(".buyNum").html($("#buyNum").html());
-        var totalP = 0;
-        for (let i = 0; i < $(".smallPlan").length; i++) {
-          // console.log(parseFloat($(".smallPlan")[i].innerHTML.substring(1)));
-           totalP += parseFloat($(".smallPlan")[i].innerHTML.substring(1));
-        }
-        $('.totalPrice').html(`￥${totalP}`)
-  
+    totalPrice() {
+      $(".buyNum").html($("#buyNum").html());
+      var totalP = 0;
+      for (let i = 0; i < $(".smallPlan").length; i++) {
+        // console.log(parseFloat($(".smallPlan")[i].innerHTML.substring(1)));
+        totalP += parseFloat($(".smallPlan")[i].innerHTML.substring(1));
+      }
+      $('.totalPrice').html(`￥${totalP}`)
+
     }
     // 删除商品
-    deletegood(){
-        var _this = this;
-        $(".deletegood").on('click',function(){
-            var id = $(this).parents('.shopgood').attr("data-shop-id");
-            $(this).parents('.shopgood').prev('.shopStore').remove().end().remove();
-            _this.totalPrice()   //更新价格
+    deletegood() {
+      var _this = this;
+      $(".deletegood").on('click', function () {
+        var id = $(this).parents('.shopgood').attr("data-shop-id");
+        $(this).parents('.shopgood').prev('.shopStore').remove().end().remove();
+        _this.totalPrice() //更新价格
 
-            // 删除cookie中的商品信息
-            var shopCarStr = $.cookie("byShopCar") ? $.cookie("byShopCar") : "";
-            var shopCarObj =JSON.parse(shopCarStr);
-            delete shopCarObj[id];
-            shopCarStr = JSON.stringify(shopCarObj);
-            $.cookie("byShopCar", shopCarStr, {
-                expires: 7,
-                path: "/"
-            });
-            _this.totalPrice();
-            _this.totalNumReload();
+        // 删除cookie中的商品信息
+        var shopCarStr = $.cookie("byShopCar") ? $.cookie("byShopCar") : "";
+        var shopCarObj = JSON.parse(shopCarStr);
+        delete shopCarObj[id];
+        shopCarStr = JSON.stringify(shopCarObj);
+        $.cookie("byShopCar", shopCarStr, {
+          expires: 7,
+          path: "/"
+        });
+        _this.totalPrice();
+        _this.totalNumReload();
 
-        })
+      })
 
     }
-    event(){
+    event() {
 
-        var _this = this;
-        //减少商品数量
-        $('.reduce').on('click',function(){
-            var id = $(this).parents('.shopgood').attr("data-shop-id");
-            var shopCarStr = $.cookie("byShopCar") ? $.cookie("byShopCar") : "";
-            var shopCarObj =JSON.parse(shopCarStr);
-            if(shopCarObj[id].num > 1){
-                shopCarObj[id].num -= 1;
-            }
-            $(this).siblings('input').val(shopCarObj[id].num)
-            // 更新小计
-            $(this).parents(".goodsLi4").next(".goodsLi3").children(".smallPlan").html(`￥${shopCarObj[id].price * shopCarObj[id].num}`)
-            shopCarStr = JSON.stringify(shopCarObj);
-            $.cookie("byShopCar", shopCarStr, {
-                expires: 7,
-                path: "/"
-            });
-            _this.totalPrice();
-            _this.totalNumReload();
-
-        })
-
-        //增加商品数量
-        $('.add').on('click',function(){
-            var id = $(this).parents('.shopgood').attr("data-shop-id");
-            var shopCarStr = $.cookie("byShopCar") ? $.cookie("byShopCar") : "";
-            var shopCarObj =JSON.parse(shopCarStr);
-            shopCarObj[id].num += 1;
-            $(this).siblings('input').val(shopCarObj[id].num)
-            // 更新小计
-            $(this).parents(".goodsLi4").next(".goodsLi3").children(".smallPlan").html(`￥${shopCarObj[id].price * shopCarObj[id].num}`)
-            shopCarStr = JSON.stringify(shopCarObj);
-            $.cookie("byShopCar", shopCarStr, {
-                expires: 7,
-                path: "/"
-            });
-            _this.totalPrice();
-            _this.totalNumReload();
-
-        })
-
-        // 输入框失焦事件
-        $('.changeNum').blur(function(){
-            var id = $(this).parents('.shopgood').attr("data-shop-id");
-            var shopCarStr = $.cookie("byShopCar") ? $.cookie("byShopCar") : "";
-            var shopCarObj =JSON.parse(shopCarStr);
-
-            var pattern =/^\d+$/;
-            if(!pattern.test($(this).val())){
-                shopCarObj[id].num = 1;
-                $(this).val(1)
-            }
-            //修改数量
-            shopCarObj[id].num = parseInt($(this).val());
-            $(this).parents(".goodsLi4").next(".goodsLi3").children(".smallPlan").html(`￥${shopCarObj[id].price * shopCarObj[id].num}`)
-            shopCarStr = JSON.stringify(shopCarObj);
-            $.cookie("byShopCar", shopCarStr, {
-                expires: 7,
-                path: "/"
-            });
-            _this.totalPrice();
-            _this.totalNumReload();
-
-        })
-        $('#deleteAll').on('click',function(){
-            $('.shopStore,.shopgood').remove();
-            $.cookie("byShopCar","")
-            _this.totalPrice();
-            _this.totalNumReload();
-            location.reload();
-
-        })
-    }
-    totalNumReload(){
-        var totalNum = 0;
-        for( var i = 0 ; i < $('.changeNum').length; i++){
-            totalNum += parseInt($('.changeNum')[i].value);
+      var _this = this;
+      //减少商品数量
+      $('.reduce').on('click', function () {
+        var id = $(this).parents('.shopgood').attr("data-shop-id");
+        var shopCarStr = $.cookie("byShopCar") ? $.cookie("byShopCar") : "";
+        var shopCarObj = JSON.parse(shopCarStr);
+        if (shopCarObj[id].num > 1) {
+          shopCarObj[id].num -= 1;
         }
-        $('#buyNum,.buyNum').html(totalNum);
+        $(this).siblings('input').val(shopCarObj[id].num)
+        // 更新小计
+        $(this).parents(".goodsLi4").next(".goodsLi3").children(".smallPlan").html(`￥${shopCarObj[id].price * shopCarObj[id].num}`)
+        shopCarStr = JSON.stringify(shopCarObj);
+        $.cookie("byShopCar", shopCarStr, {
+          expires: 7,
+          path: "/"
+        });
+        _this.totalPrice();
+        _this.totalNumReload();
+
+      })
+
+      //增加商品数量
+      $('.add').on('click', function () {
+        var id = $(this).parents('.shopgood').attr("data-shop-id");
+        var shopCarStr = $.cookie("byShopCar") ? $.cookie("byShopCar") : "";
+        var shopCarObj = JSON.parse(shopCarStr);
+        shopCarObj[id].num += 1;
+        $(this).siblings('input').val(shopCarObj[id].num)
+        // 更新小计
+        $(this).parents(".goodsLi4").next(".goodsLi3").children(".smallPlan").html(`￥${shopCarObj[id].price * shopCarObj[id].num}`)
+        shopCarStr = JSON.stringify(shopCarObj);
+        $.cookie("byShopCar", shopCarStr, {
+          expires: 7,
+          path: "/"
+        });
+        _this.totalPrice();
+        _this.totalNumReload();
+
+      })
+
+      // 输入框失焦事件
+      $('.changeNum').blur(function () {
+        var id = $(this).parents('.shopgood').attr("data-shop-id");
+        var shopCarStr = $.cookie("byShopCar") ? $.cookie("byShopCar") : "";
+        var shopCarObj = JSON.parse(shopCarStr);
+
+        var pattern = /^\d+$/;
+        if (!pattern.test($(this).val())) {
+          shopCarObj[id].num = 1;
+          $(this).val(1)
+        }
+        //修改数量
+        shopCarObj[id].num = parseInt($(this).val());
+        $(this).parents(".goodsLi4").next(".goodsLi3").children(".smallPlan").html(`￥${shopCarObj[id].price * shopCarObj[id].num}`)
+        shopCarStr = JSON.stringify(shopCarObj);
+        $.cookie("byShopCar", shopCarStr, {
+          expires: 7,
+          path: "/"
+        });
+        _this.totalPrice();
+        _this.totalNumReload();
+
+      })
+
+      $('#deleteAll').on('click', function () {
+        $('.shopStore,.shopgood').remove();
+        $.cookie("byShopCar", "", {
+          expires: -1,
+          path: "/"
+        })
+        _this.totalPrice();
+        _this.totalNumReload();
+        location.reload();
+
+      })
+    }
+    totalNumReload() {
+      var totalNum = 0;
+      for (var i = 0; i < $('.changeNum').length; i++) {
+        totalNum += parseInt($('.changeNum')[i].value);
+      }
+      $('#buyNum,.buyNum').html(totalNum);
     }
   }
-  
+
 
   new OperateShoppingCart();
+
+  function loadShopCar() {
+    var shopCarStr = $.cookie("byShopCar") ? $.cookie("byShopCar") : "";
+    var shopCarObj = shopCarStrToObj(shopCarStr);
+    // 获取购物车中商品的数量
+    var total = 0;
+    for (var id in shopCarObj) {
+      total += shopCarObj[id].num;
+    }
+    $(".num").html(total);
+  }
+  //  把cookie从字符串转为对象
+  function shopCarStrToObj(str) {
+    if (!str) {
+      return {};
+    }
+    return JSON.parse(str);
+  }
+
+  loadShopCar();
+
+
+
 });
